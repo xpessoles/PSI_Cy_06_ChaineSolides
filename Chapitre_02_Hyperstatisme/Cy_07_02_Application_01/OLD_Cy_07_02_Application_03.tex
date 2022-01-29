@@ -1,0 +1,341 @@
+\documentclass[10pt,fleqn]{article} % Default font size and left-justified equations
+\usepackage[%
+    pdftitle={Modélisation dynamique},
+    pdfauthor={Xavier Pessoles}]{hyperref}
+
+    
+\input{style/new_style}
+\input{style/macros_SII}
+\usepackage{multicol}
+\usepackage{siunitx}
+%\usepackage{picins}
+\fichetrue
+%\fichefalse
+
+\proftrue
+\proffalse
+
+\tdtrue
+%\tdfalse
+
+\courstrue
+\coursfalse
+
+
+\def\classe{\textsf{PSI$\star$ -- MP}}
+\def\xxnumpartie{Cycle 07}
+\def\xxpartie{Modélisation des chaînes de solides dans le but de déterminer les contraintes géométriques dans les mécanismes}
+
+\def\xxnumchapitre{Chapitre 2 \vspace{.2cm}}
+\def\xxchapitre{\hspace{.12cm} Hyperstatisme}
+
+
+\def\discipline{Sciences \\Industrielles de \\ l'Ingénieur}
+\def\xxtete{Sciences Industrielles de l'Ingénieur}
+
+
+
+
+\def\xxtitreexo{Application 01}
+\def\xxsourceexo{\hspace{.2cm} \footnotesize{}}%Xavier Pessoles}}
+
+
+\def\xxposongletx{2}
+\def\xxposonglettext{1.45}
+\def\xxposonglety{20}
+%\def\xxonglet{Part. 1 -- Ch. 3}
+\def\xxonglet{\textsf{Cycle 07}}
+
+\def\xxactivite{Applications}
+\def\xxauteur{\textsl{Xavier Pessoles}}
+
+\def\xxcompetences{%
+\vspace{-.5cm}
+\footnotesize{
+\textsl{%
+\textbf{Savoirs et compétences :}\\
+\vspace{-.2cm}
+\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+\item \textit{Mod2.C34} : chaînes de solides;
+\item \textit{Mod2.C34} : degré de mobilité du modèle;
+\item \textit{Mod2.C34} : degré d’hyperstatisme du modèle;
+\item \textit{Mod2.C34.SF1} : déterminer les conditions géométriques associées à l’hyperstatisme;
+\item \textit{Mod2.C34} : résoudre le système associé à la fermeture cinématique et en déduire le degré de mobilité et d’hyperstatisme.
+\end{itemize}}}}
+
+\def\xxfigures{
+%\includegraphics[width=.6\linewidth]{images/fig_00}
+}%figues de la page de garde
+
+\def\xxpied{%
+Cycle 07 -- Modélisation des chaînes de solides \\%dans le but de déterminer les contraintes géométriques dans les mécanismes\\% afin de valider leurs performances.\\
+Chapitre 2 -- \xxactivite%
+}
+
+\setcounter{secnumdepth}{5}
+%---------------------------------------------------------------------------
+
+\usepackage{pgfplots}
+\begin{document}
+\def\pathfig{images}
+%\chapterimage{png/Fond_Cin}
+\input{style/new_pagegarde}
+\vspace{4.5cm}
+\pagestyle{fancy}
+\thispagestyle{plain}
+
+\def\columnseprulecolor{\color{ocre}}
+\setlength{\columnseprule}{0.4pt} 
+
+\def\pathfig{images}
+
+\begin{multicols}{2}
+
+\subsection*{Exercice 1 --Applications directes}
+\setcounter{exo}{0}
+\begin{flushright}
+\textit{Pôle Chateaubriand -- Joliot-Curie.}
+\end{flushright}
+
+
+\subparagraph{}\textit{Pour chacun des mécanismes suivants, déterminer le degré d'hyperstatisme.}
+
+\subparagraph{}\textit{Lorsque le modèle est hyperstatique, proposer :
+\begin{itemize}
+\item des conditions d'assemblage (intuitivement);
+\item un modèle isostatique.
+\end{itemize}}
+
+\begin{center}
+\includegraphics[width=.6\linewidth]{images/fig_01.png}
+\end{center}
+
+\begin{center}
+\includegraphics[width=.45\linewidth]{images/fig_02.png}
+\includegraphics[width=.45\linewidth]{images/fig_03.png}
+\end{center}
+
+\begin{center}
+\includegraphics[width=.45\linewidth]{images/fig_04.png}
+\includegraphics[width=.45\linewidth]{images/fig_05.png}
+\end{center}
+
+%\begin{center}
+%\includegraphics[width=.4\linewidth]{images/fig_06.png}
+%\end{center}
+
+\begin{center}
+\includegraphics[width=.45\linewidth]{images/fig_07.png}
+\includegraphics[width=.45\linewidth]{images/fig_08.png}
+\end{center}
+
+\begin{center}
+\includegraphics[width=.45\linewidth]{images/fig_09.png}
+\includegraphics[width=.45\linewidth]{images/fig_10.png}
+\end{center}
+
+
+
+\subsection*{Exercice 2 -- Déphasage d'arbre à cames}
+\setcounter{exo}{0}
+\begin{flushright}
+\textit{Banque PT SIA -- 2008.}
+\end{flushright}
+
+L'optimisation d'un moteur 4 temps passe (entre autre) par une bonne maîtrise des lois de levée des soupapes. Il est ainsi possible de positionner entre la poulie \textbf{1} (entraînée par le vilebrequin via une chaîne) et l'arbre à came  \textbf{2} un système permettant de créer un déphasage entre ces pièces. 
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{images/calage_1.png}
+\end{center}
+
+On propose ci-dessous un modèle cinématique du système de déphasage. On retrouve la culasse \textbf{0}, la poulie d’entraînement \textbf{1}, l'arbre à cames \textbf{2}, le piston \textbf{3} et le coulisseau \textbf{4}. 
+
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/calage_2.png}
+\end{center}
+
+\subparagraph{}
+\textit{Établir le graphe des liaisons du mécanisme.}
+\ifprof
+\begin{corrige}
+\end{corrige}\else\fi
+
+\subparagraph{}
+\textit{Déterminer le degré d'hyperstatisme en précisant la démarche utilisée. (On utilisera la méthode cinématique et la méthode statique).}
+\ifprof
+\begin{corrige}
+\end{corrige}\else\fi
+
+\subsection*{Exercice 3 -- Simulateur de vol pour la formation de pilotes en aéroclub}
+\setcounter{exo}{0}
+\begin{flushright}
+\textit{Centrale Supelec 2017 -- PSI.}
+\end{flushright}
+On s’intéresse à un simulateur de vol à plate-forme dynamique. 
+%
+%\begin{center}
+%\includegraphics[width=.7\linewidth]{images/aero_01.png}
+%\end{center}
+Deux moteurs permettent d'assurer le mouvement de tangage.  Ils entraînent respectivement les liaisons pivots de centres $H$ et $O$. 
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/aero_04.png}
+\end{center}
+
+On propose le modèle plan suivant (la pièce 6 est en traits pointillés pour la démarquer des autres pièces).
+
+\subparagraph{}\textit{Déterminer le degré d'hyperstatisme du modèle proposé.}
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/aero_06.png}
+\end{center}
+
+\subsection*{Exercice 4 -- Chariot élévateur de bateaux}
+On donne le schéma cinémétique et le graphe de liaisons associés au chariot élévateur de bateaux. 
+\setcounter{exo}{0}
+\subparagraph{}\textit{Déterminer le degré d'hyperstatisme du modèle.}
+\begin{center}
+\includegraphics[width=.8\linewidth]{images/fig_11.png}
+%\includegraphics[width=.45\linewidth]{images/fig_12.png}
+\end{center}
+
+\begin{center}
+\includegraphics[width=.8\linewidth]{images/fig_12.png}
+%\includegraphics[width=.45\linewidth]{images/fig_12.png}
+\end{center}
+
+
+%\vspace{3cm}
+%
+%\subsection*{Éléments de corrigé}
+
+
+
+\subsection*{Exercice 5 -- Pousseur de tablier}
+\setcounter{exo}{0}
+\begin{flushright}
+\textit{Banque PT 2008 -- SIC.}
+\end{flushright}
+
+Une technique pour construire un pont et de commencer par ériger les piles définitives en béton et les piles
+temporaires en acier. On peut alors assembler tronçon par tronçon, les 2 tabliers sur la terre ferme et enfin
+pousser les deux parties du tablier assemblées sur les piles afin de réaliser la jonction.
+Cette opération de poussée est réalisée à l’aide de systèmes hydrauliques nommés « pousseurs
+de tablier ». 
+
+\begin{center}
+\includegraphics[width=.6\linewidth]{images/viaduc_01.png}
+\end{center}
+
+Le pousseur de tablier est soutenu par plusieurs vérins de balancelle verticaux (non étudiés) qui assurent le positionnement de la semelle afin que la cale de poussée soit parallèle et à la bonne distance du plan inférieur du tablier. 
+\begin{center}
+\includegraphics[width=\linewidth]{images/viaduc_02.png}
+\end{center}
+
+On suppose dans cette partie, que l’angle que fait le plan supérieur de la cale de levage avec
+l’horizontale est petit. Ce qui revient à considérer que les contacts dans les liaisons planes sont
+maintenus durant tout le mouvement.
+Une première étude conduit à la modélisation suivante.
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/viaduc_03.png}
+\end{center}
+
+\subparagraph{}
+\textit{Proposer un modèle pour tenir compte de l'hypothèse des angles << petits >>.}
+\ifprof
+\begin{corrige}
+\end{corrige}\else\fi
+
+\subparagraph{}
+\textit{Estimer le degré de mobilité du modèle proposé.}
+\ifprof
+\begin{corrige}
+\end{corrige}\else\fi
+
+
+\subparagraph{}
+\textit{Déterminer le degré d’hyperstatisme du modèle proposé.}
+\ifprof
+\begin{corrige}
+\end{corrige}\else\fi
+
+
+\subparagraph{}
+\textit{Proposer des modifications pour rendre le système isostatique. Faire un
+nouveau schéma cinématique tenant compte de ces modifications.}
+\ifprof
+\begin{corrige}
+\end{corrige}\else\fi
+
+
+\subparagraph{}
+\textit{Le constructeur a fait le choix de mettre
+une liaison glissière de direction horizontale à la place de
+la liaison plane entre la cale de levage (2) et la semelle (3)
+(figure 6). Qu’est-ce qui justifie un tel choix ? Comment
+peut-on rendre ce modèle isostatique ?}
+\ifprof
+\begin{corrige}
+\end{corrige}\else\fi
+
+\begin{center}
+\includegraphics[width=.8\linewidth]{images/viaduc_04.png}
+\end{center}
+
+
+
+\subsection*{Exercice 6 -- Planeur sous marin}
+\setcounter{exo}{0}
+\begin{flushright}
+\textit{Banque PT 2012 -- SIC.}
+\end{flushright}
+
+Le planeur sous-marin est un dispositif autonome développé par l'IFREMER dont le but est de réaliser des mesures océanographiques. Il ressemble à un mini sous-marin qui plane en dents de scie vers un point prédéfini. Il remonte régulièrement à la surface afin de communiquer avec son opérateur par satellite afin d'envoyer les données acquises pendant sa plongée pour évaluer sa dérive due aux courants. 
+
+
+Dans le but de modifier l'orientation et l'équilibrage du planeur, l apartie centrale du planeur comporte un dispositif qui permet de positionner le centre de gravité axialement \textbf{24} et radialement \textbf{11}. 
+
+\begin{center}
+\includegraphics[width=.8\linewidth]{images/plan_01.png}
+\end{center}
+
+\begin{center}
+\includegraphics[width=.8\linewidth]{images/plan_02.png}
+\end{center}
+
+
+\subparagraph{}
+\textit{Réaliser le graphe de liaison associé au schéma cinématique minimal proposé. Identifier le nombre de mobilités. }
+\ifprof
+\begin{corrige}
+\end{corrige}\else\fi
+
+On supposera que la liaison entre deux roues dentées est une liaison ponctuelle. 
+
+
+\subparagraph{}
+\textit{Déterminer le degré d'hyperstatisme. Si celui-ci est non nul, indiquer la ou les contraintes géométriques associées. }
+\ifprof
+\begin{corrige}
+\end{corrige}\else\fi
+
+
+\end{multicols}
+\end{document}
+
+
+
+\begin{center}
+\includegraphics[width=.8\linewidth]{images/fig_01.png}
+\end{center}
+
+
+\subparagraph{}
+\textit{}
+\ifprof
+\begin{corrige}
+\end{corrige}\else\fi
+
+
