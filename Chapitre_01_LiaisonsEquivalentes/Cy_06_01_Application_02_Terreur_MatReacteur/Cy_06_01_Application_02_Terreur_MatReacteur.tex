@@ -29,24 +29,13 @@
 }%figues de la page de garde
 
 
-\iflivret
-\input{../../style/new_pagegarde}
-\else
-\input{../../style/new_pagegarde}
-\fi
+\input{\repRel/Style/pagegarde_TD}
+\setcounter{numques}{0}
 \setlength{\columnseprule}{.1pt}
-
 \pagestyle{fancy}
 \thispagestyle{plain}
 
-\ifprof
-\vspace{5cm}
-\else
-\vspace{5cm}
-\fi
-
-\def\columnseprulecolor{\color{ocre}}
-\setlength{\columnseprule}{0.4pt} 
+\vspace{5.2cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%
 
@@ -168,27 +157,27 @@ Afin de simplifier l'étude, nous nous intéressons d'abord à la liaison équiv
 %%\end{figure}
 %\vspace{1.5cm}}
 
-\subparagraph{}\textit{En utilisant le modèle de la figure précédente,
+\question{En utilisant le modèle de la figure précédente,
     montrer que l'association en série d'une ponctuelle de normale
     $\vect{n}$ et d'une liaison pivot d'axe $\vect{z}$ est équivalente à
     une liaison ponctuelle de normale $\vect{n}$.}
 
 Dans la suite, nous considérerons cette simplification pour tous les galets.
 
-\subparagraph{}\textit{Proposer un graphe des liaisons faisant intervenir les modèles des 12 galets entre le rail et l'ascenseur.}
+\question{Proposer un graphe des liaisons faisant intervenir les modèles des 12 galets entre le rail et l'ascenseur.}
 
-\subparagraph{}\textit{Donner le torseur cinématique d'une liaison ponctuelle ou sphère-plan en précisant le point d'écriture et la base.}
+\question{Donner le torseur cinématique d'une liaison ponctuelle ou sphère-plan en précisant le point d'écriture et la base.}
 
-\subparagraph{}\textit{Montrer que l'association de trois liaisons ponctuelles en parallèle au niveau d'un guidage ($A$, $B$, $C$ ou $D$) est équivalente à une liaison sphère-cylindre dont on précisera les caractéristiques.}
+\question{Montrer que l'association de trois liaisons ponctuelles en parallèle au niveau d'un guidage ($A$, $B$, $C$ ou $D$) est équivalente à une liaison sphère-cylindre dont on précisera les caractéristiques.}
 
-\subparagraph{}\textit{Montrer que l'association en parallèle de deux liaisons sphère-cylindre de même axe est équivalente à une liaison pivot glissant.}
+\question{Montrer que l'association en parallèle de deux liaisons sphère-cylindre de même axe est équivalente à une liaison pivot glissant.}
 
 %\newpage
 %\enlargethispage{\baselineskip}
 
-\subparagraph{}\textit{Conclure sur la liaison équivalente entre la cabine et le rail compte tenu des résultats précédents.}
+\question{Conclure sur la liaison équivalente entre la cabine et le rail compte tenu des résultats précédents.}
 
-\subparagraph{}\textit{Pourquoi utilise-t-on cette solution pour guider la cabine de l'ascenseur ?}
+\question{Pourquoi utilise-t-on cette solution pour guider la cabine de l'ascenseur ?}
 
 
 
@@ -212,11 +201,11 @@ Les mouvements du mât-réacteur \textbf{(1)} par rapport à l’aile \textbf{(0
 
 Le triangle \textbf{(3)} est articulé sur \textbf{(1)} par deux liaisons « shériques » de centres $C$ et $D$, et sur \textbf{(0)} par une liaison « sphérique » de centre $J$. On a : $\vect{CD}=a\vect{y}$  et  $\vect{CJ}=\dfrac{1}{2}c\vect{y}-j\vect{x}$.
 
-\subparagraph{}\textit{Tracer le graphe de structure de l’assemblage.}
-\subparagraph{}\textit{Déterminer la liaison équivalente entre \textbf{(1)} et \textbf{(0)} réalisée par la biellette \textbf{(4)} puis par la biellette \textbf{(5)}.}
-\subparagraph{}\textit{Déterminer la liaison équivalente réalisée entre \textbf{(1)} et \textbf{(0)} par le triangle \textbf{(2)} puis par le triangle \textbf{(3)}.}
-\subparagraph{}\textit{Tracer en perspective le schéma architectural de l’assemblage du mât \textbf{(1)} sur l’aile \textbf{(0)} en utilisant les modèles des liaisons équivalentes déterminées aux questions précédentes.}
-\subparagraph{}\textit{Déterminer le degré d’hyperstatisme de l’assemblage \textbf{(1)}/\textbf{(0)} ; justifier l’intérêt du résultat en raisonnant sur les dilatations provoquées par des températures et des matériaux différents pour l’aile et le mât-réacteur.}
+\question{Tracer le graphe de structure de l’assemblage.}
+\question{Déterminer la liaison équivalente entre \textbf{(1)} et \textbf{(0)} réalisée par la biellette \textbf{(4)} puis par la biellette \textbf{(5)}.}
+\question{Déterminer la liaison équivalente réalisée entre \textbf{(1)} et \textbf{(0)} par le triangle \textbf{(2)} puis par le triangle \textbf{(3)}.}
+\question{Tracer en perspective le schéma architectural de l’assemblage du mât \textbf{(1)} sur l’aile \textbf{(0)} en utilisant les modèles des liaisons équivalentes déterminées aux questions précédentes.}
+\question{Déterminer le degré d’hyperstatisme de l’assemblage \textbf{(1)}/\textbf{(0)} ; justifier l’intérêt du résultat en raisonnant sur les dilatations provoquées par des températures et des matériaux différents pour l’aile et le mât-réacteur.}
 
 
 \fi

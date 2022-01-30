@@ -29,24 +29,18 @@
 }%figues de la page de garde
 
 
-\iflivret
-\input{../../style/new_pagegarde}
-\else
-\input{../../style/new_pagegarde}
-\fi
+\input{\repRel/Style/pagegarde_TD}
+\setcounter{numques}{0}
 \setlength{\columnseprule}{.1pt}
-
 \pagestyle{fancy}
 \thispagestyle{plain}
 
-\ifprof
-\vspace{5cm}
-\else
-\vspace{5cm}
-\fi
+
+\vspace{5.2cm}
 
 \def\columnseprulecolor{\color{ocre}}
 \setlength{\columnseprule}{0.4pt} 
+
 
 %%%%%%%%%%%%%%%%%%%%%%%
 
@@ -62,8 +56,7 @@
 
 \subsection*{Liaisons en parallèle}
 
-\subparagraph{}
-\textit{Déterminer la liaison équivalente des liaisons suivantes.}
+\question{Déterminer la liaison équivalente des liaisons suivantes.}
 
 \begin{center}
 \includegraphics[width=.8\linewidth]{fig_01.png}
@@ -108,8 +101,7 @@
 
 \subsection*{Liaisons en série}
 
-\subparagraph{}
-\textit{Déterminer la liaison équivalente des liaisons suivantes.}
+\question{Déterminer la liaison équivalente des liaisons suivantes.}
 
 
 \begin{center}
