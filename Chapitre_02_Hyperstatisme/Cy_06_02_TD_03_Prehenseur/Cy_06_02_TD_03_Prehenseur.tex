@@ -29,24 +29,12 @@
 \includegraphics[width=.8\textwidth]{fig_01}
 }%figues de la page de garde
 
-
-
-
-\iflivret
-\input{../../style/new_pagegarde}
-\else
-\input{../../style/new_pagegarde}
-\fi
+\input{\repRel/Style/pagegarde_TD}
+\setcounter{numques}{0}
 \setlength{\columnseprule}{.1pt}
-
 \pagestyle{fancy}
 \thispagestyle{plain}
-
-\ifprof
-\vspace{5cm}
-\else
-\vspace{5cm}
-\fi
+\vspace{5.2cm}
 
 \def\columnseprulecolor{\color{ocre}}
 \setlength{\columnseprule}{0.4pt} 
@@ -100,7 +88,7 @@ figure suivante représente le schéma cinématique de l’ensemble.
 \else
 La courroie étant un élément déformable, on n’en tiendra pas compte dans l’étude suivante.
 \fi
-\subparagraph{}\textit{Déterminer le degré d’hyperstatisme de la liaison entre les solides 0 et 1.}
+\question{Déterminer le degré d’hyperstatisme de la liaison entre les solides 0 et 1.}
 \ifprof
 \begin{corrige} ~\\
 
@@ -152,7 +140,7 @@ L’introduction des deux soufflets métalliques impose de décomposer l’arbre
 \fi
 
 
-\subparagraph{}\textit{Tracer le nouveau graphe de liaisons en tenant compte de l’introduction des deux soufflets métalliques.}
+\question{Tracer le nouveau graphe de liaisons en tenant compte de l’introduction des deux soufflets métalliques.}
 \ifprof
 \begin{corrige} ~\\
 
@@ -165,7 +153,7 @@ L’introduction des deux soufflets métalliques impose de décomposer l’arbre
 \fi
 
 
-\subparagraph{}\textit{Déterminer en le justifiant le degré de mobilité du mécanisme ainsi modélisé en question précédente.}
+\question{Déterminer en le justifiant le degré de mobilité du mécanisme ainsi modélisé en question précédente.}
 \ifprof
 \begin{corrige} ~\\
 En réalisant une fermeture cinématique, on a $\torseurcin{V}{1_a}{0}+\torseurcin{V}{1_b}{1_a}+\torseurcin{V}{1_c}{1_b}=\torseurcin{V}{1_c}{0}$. 
@@ -193,7 +181,7 @@ Il s'agit d'un système de rang 6 avec 12 inconnues. On a donc $m=I_c-r_c=12-6=6
 \fi
 
 
-\subparagraph{}\textit{En déduire le degré d’hyperstatisme du système avec ses deux soufflets métalliques.}
+\question{En déduire le degré d’hyperstatisme du système avec ses deux soufflets métalliques.}
 \ifprof
 \begin{corrige} ~\\
 On a $h=m-I_c+E_c = 6-12+6 = 0$.
@@ -207,7 +195,7 @@ On a $h=m-I_c+E_c = 6-12+6 = 0$.
 
 
 
-\subparagraph{}\textit{Conclure en justifiant l’utilisation des soufflets.}
+\question{Conclure en justifiant l’utilisation des soufflets.}
 \ifprof
 \begin{corrige} ~\\
 Le soufflet permet donc de rendre le système isostatique. Il est ainsi possible de monter le système sans avoir à imposer des contraintes géométriques sur le mécanisme. 

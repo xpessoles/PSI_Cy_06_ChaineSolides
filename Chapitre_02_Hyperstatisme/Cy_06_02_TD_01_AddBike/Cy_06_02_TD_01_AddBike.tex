@@ -29,23 +29,12 @@
 \includegraphics[width=.5\linewidth]{add_03}
 }%figues de la page de garde
 
-
-
-\iflivret
-\input{../../style/new_pagegarde}
-\else
-\input{../../style/new_pagegarde}
-\fi
+\input{\repRel/Style/pagegarde_TD}
+\setcounter{numques}{0}
 \setlength{\columnseprule}{.1pt}
-
 \pagestyle{fancy}
 \thispagestyle{plain}
-
-\ifprof
-\vspace{5cm}
-\else
-\vspace{5cm}
-\fi
+\vspace{5.2cm}
 
 \def\columnseprulecolor{\color{ocre}}
 \setlength{\columnseprule}{0.4pt} 
@@ -88,11 +77,9 @@ $\vect{x_0}$. Lors de la déformation du parallélogramme, les bielles 01 et 03 
 
 L’angle $\beta$  correspond à l’angle de roulis des bielles 01 et 03.
 
-\subparagraph{}
-\textit{En réalisant une fermeture géométrique, déterminer la relation liant l’angle $\beta$  et l’excentricité $e$ des fusées 02g et 02d.}
+\question{En réalisant une fermeture géométrique, déterminer la relation liant l’angle $\beta$  et l’excentricité $e$ des fusées 02g et 02d.}
 
-\subparagraph{}
-\textit{En déduire une valeur de l’excentricité $e$ permettant de valider l’exigence 1.2.1.}
+\question{En déduire une valeur de l’excentricité $e$ permettant de valider l’exigence 1.2.1.}
 
 \ifprof
 \begin{corrige}
@@ -109,8 +96,7 @@ Afin de pouvoir vendre son produit à un prix attractif, la start-up doit pouvoi
 \includegraphics[width=\linewidth]{req_02.png}
 \end{center}
 
-\subparagraph{}
-\textit{Après avoir fait un graphe de structure et sans tenir compte des roues et de leurs liaisons au sol, donner le degré d’hyperstatisme du modèle cinématique suivant.}
+\question{Après avoir fait un graphe de structure et sans tenir compte des roues et de leurs liaisons au sol, donner le degré d’hyperstatisme du modèle cinématique suivant.}
 
 \ifprof
 \begin{corrige}
@@ -121,23 +107,20 @@ Afin de pouvoir vendre son produit à un prix attractif, la start-up doit pouvoi
 \end{center}
 
 
-\subparagraph{}
-\textit{Donner les torseurs cinématiques $\torseurcin{V}{2}{3}$, $\torseurcin{V}{1}{2}$, $\torseurcin{V}{4}{3}$, $\torseurcin{V}{1}{4}$.}
+\question{Donner les torseurs cinématiques $\torseurcin{V}{2}{3}$, $\torseurcin{V}{1}{2}$, $\torseurcin{V}{4}{3}$, $\torseurcin{V}{1}{4}$.}
 \ifprof
 \begin{corrige}
 \end{corrige}\else\fi
 
 
-\subparagraph{}
-\textit{En utilisant une fermeture de chaîne cinématique, donner le système d’équations liant les différentes variables.}
+\question{En utilisant une fermeture de chaîne cinématique, donner le système d’équations liant les différentes variables.}
 \ifprof
 \begin{corrige}
 \end{corrige}\else\fi
 
 
 
-\subparagraph{}
-\textit{En déduire les conditions géométriques à imposer sur la bielle (03) afin de satisfaire l’assemblage du mécanisme. }
+\question{En déduire les conditions géométriques à imposer sur la bielle (03) afin de satisfaire l’assemblage du mécanisme. }
 \ifprof
 \begin{corrige}
 \end{corrige}\else\fi
@@ -145,8 +128,7 @@ Afin de pouvoir vendre son produit à un prix attractif, la start-up doit pouvoi
 
 
 \subsection*{Synthèse}
-\subparagraph{}
-\textit{Conclure sur les méthodes qui ont permis de répondre aux exigences 1.4 et 1.5.}
+\question{Conclure sur les méthodes qui ont permis de répondre aux exigences 1.4 et 1.5.}
 \ifprof
 \begin{corrige}
 \end{corrige}\else\fi

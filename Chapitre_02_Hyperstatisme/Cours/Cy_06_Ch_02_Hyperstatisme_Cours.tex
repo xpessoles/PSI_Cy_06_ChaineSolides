@@ -31,16 +31,9 @@
 
 \includegraphics[width=0.5\textwidth]{simu}\\
 \textit{Simulateur de vol Lockheed Martin}
-
 }%figues de la page de garde%figues de la page de garde
 
-\iflivret
-\input{../../style/new_pagegarde}
-\else
-\input{../../style/new_pagegarde}
-\fi
-\setlength{\columnseprule}{.1pt}
-
+\input{\repStyle/new_pagegarde}
 \vspace{2cm}
 \pagestyle{fancy}
 \thispagestyle{plain}
@@ -51,27 +44,26 @@
 	%-----------------------------------------------------------
 
 	
-		
-		\begin{definition}[Mobilité cinématique]
-		On appelle $m_c=m_u+m_i$ le \textbf{degrés de mobilité cinématique} d'une liaison ou d'un mécanisme, avec :
-			\begin{itemize}
-				\item $m_u$ : le nombre de mobilités dites \textbf{utile};
-				\item $m_i$ : le nombre de mobilités dites \textbf{interne}.
-			\end{itemize}
-		\end{definition}
+\begin{defi}\small{\textbf{\textsf{Mobilité cinématique}}}
+On appelle $m_c=m_u+m_i$ le \textbf{degrés de mobilité cinématique} d'une liaison ou d'un mécanisme, avec :
+\begin{itemize}
+\item $m_u$ : le nombre de mobilités dites \textbf{utile};
+\item $m_i$ : le nombre de mobilités dites \textbf{interne}.
+\end{itemize}
+\end{defi}
 
-		Pour une liaison seule :
-		\begin{itemize}
-			\item $m_c=0$ : liaison complète ou rigide;
-			\item $m_c>0$ : liaison mobile à $m_c$ degrés de liberté.
-		\end{itemize}
+Pour une liaison seule :
+\begin{itemize}
+\item $m_c=0$ : liaison complète ou rigide;
+\item $m_c>0$ : liaison mobile à $m_c$ degrés de liberté.
+\end{itemize}
 
-		\begin{rem}
-			\item Dans un mécanisme, une mobilité utile est une mobilité \textbf{recherchée dans la fonction du mécanisme}.
-				On différenciera \textbf{seulement} les mobilités utiles \textbf{indépendantes}.
-				Si une relation existe, par exemple, entre un mouvement d'entrée et un mouvement de sortie, alors cela sera considéré comme une seule mobilité.
-			\item Les mobilités internes sont des mobilités indépendantes résiduelles à l'intérieur du mécanisme.
-		\end{rem}
+\begin{rem}
+\item Dans un mécanisme, une mobilité utile est une mobilité \textbf{recherchée dans la fonction du mécanisme}.
+On différenciera \textbf{seulement} les mobilités utiles \textbf{indépendantes}.
+Si une relation existe, par exemple, entre un mouvement d'entrée et un mouvement de sortie, alors cela sera considéré comme une seule mobilité.
+\item Les mobilités internes sont des mobilités indépendantes résiduelles à l'intérieur du mécanisme.
+\end{rem}
 
 
 
@@ -100,9 +92,6 @@ On a alors $m_c =E_S - r_s$.
 
 
 \end{multicols}
-
-
-
 \end{methode}
 		
 \section{Hyperstatisme}
@@ -110,7 +99,7 @@ On a alors $m_c =E_S - r_s$.
 On appelle $h$ le degré d'hyperstatisme d'un mécanisme.
 			Il traduit l'impossibilité à résoudre un problème de mécanique, par la redondance abusive des liaisons.
 			
-\begin{definition}[Degrés d'hyperstatisme]
+\begin{defi}\small{\textbf{\textsf{Degrés d'hyperstatisme}}}
 On peut définir le degré d'hyperstatisme par :
 
 \vspace{-.6cm}
@@ -137,23 +126,20 @@ h=m_c-E_s+I_s
 $$
 
 \end{multicols}
-		\begin{itemize}
-			\item $h=0$ : liaison ou mécanisme \textbf{isostatique};
-			\item $h>0$ : liaison ou mécanisme \textbf{hyperstatique}.
-		\end{itemize}
-\end{definition}
+\begin{itemize}
+\item $h=0$ : liaison ou mécanisme \textbf{isostatique};
+\item $h>0$ : liaison ou mécanisme \textbf{hyperstatique}.
+\end{itemize}
+\end{defi}
 
 
 
 
 
 
-\begin{definition}[Notations]
+\begin{defi}\small{\textbf{\textsf{Notations}}}
 
 $I_c$ et $I_s$ sont respectivement les \textbf{nombres d'inconnues cinématiques et statiques} d'un système et ils dépendent du type de modélisation (2D ou 3D).
-
-
-
 
 \vspace{-.6cm}
 
@@ -183,14 +169,13 @@ On note $E_c$ le nombre d'équations cinématique :%et $E_{cp}$ représente le n
 %\vspace{-.3cm}
 
 $E_s$ est le nombre d'équations statique :
-				\begin{itemize}
-					\item en 3D : $E_s=6 (S-1)$;
-					\item en 2D : $E_s=3 (S-1)$.
-				\end{itemize}
-
+\begin{itemize}
+\item en 3D : $E_s=6 (S-1)$;
+\item en 2D : $E_s=3 (S-1)$.
+\end{itemize}
 
 \end{multicols}
-\end{definition}
+\end{defi}
 
 \begin{rem}
 
@@ -217,7 +202,7 @@ Un système hyperstatique peut donc être plus cher à réaliser, mais peut êtr
 Pour calculer les efforts dans un système hyperstatique, plusieurs solutions sont possibles : on peut par exemple faire des hypothèses sur une répartition d'efforts. 
 
 
-\begin{methode}[Conditions de montage]
+\begin{methode}\small{\textbf{\textsf{Conditions de montage}}}
 Pour déterminer les conditions de montage, il est possible d'exploiter les équations $0=0$ issues des fermetures de chaînes cinématiques.  En effet, le nombre d'équations $0=0$ correspond  au degré d'hyperstatisme.
 \begin{itemize}
 \item une équation de type $0=0$ issue de la fermeture des vecteurs taux de rotation impose de spécifier un parallélisme;

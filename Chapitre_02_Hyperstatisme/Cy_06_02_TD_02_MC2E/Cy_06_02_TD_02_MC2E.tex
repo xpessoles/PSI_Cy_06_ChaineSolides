@@ -30,23 +30,12 @@
 }%figues de la page de garde
 
 
-
-
-\iflivret
-\input{../../style/new_pagegarde}
-\else
-\input{../../style/new_pagegarde}
-\fi
+\input{\repRel/Style/pagegarde_TD}
+\setcounter{numques}{0}
 \setlength{\columnseprule}{.1pt}
-
 \pagestyle{fancy}
 \thispagestyle{plain}
-
-\ifprof
-\vspace{5cm}
-\else
-\vspace{5cm}
-\fi
+\vspace{5.2cm}
 
 \def\columnseprulecolor{\color{ocre}}
 \setlength{\columnseprule}{0.4pt} 
@@ -125,7 +114,7 @@ imposée par la forme du trocart, que l’on suppose lié à l’abdomen du pati
 On va dans un premier temps considérer la chaîne ouverte de solides allant de \textbf{(0)} à \textbf{(4)} par l’intermédiaire des trois liaisons pivot et de la liaison glissière.
 \fi
 
-\subparagraph{}\textit{On considère la chaîne ouverte de solides \textbf{(0+1+2+3+4)}. Par la méthode de votre choix, définir le torseur cinématique de la liaison équivalente 4/0 noté $\left\{\mathcal{V}^{\text{eq}}({4}/{0})\right\}$. En déduire la mobilité cinématique $m_c$
+\question{On considère la chaîne ouverte de solides \textbf{(0+1+2+3+4)}. Par la méthode de votre choix, définir le torseur cinématique de la liaison équivalente 4/0 noté $\left\{\mathcal{V}^{\text{eq}}({4}/{0})\right\}$. En déduire la mobilité cinématique $m_c$
 de cette chaîne de solides.}
 \ifprof
 \begin{corrige} ~\\
@@ -152,7 +141,7 @@ On envisage deux modélisations pour la liaison entre la pince \textbf{(4)} et l
 
 \fi
 
-\subparagraph{}\textit{Dans le cadre des deux modélisations retenues, quels sont alors le degré d’hyperstatisme et la mobilité cinématique de la chaîne fermée. Compléter le tableau du document réponse concernant les
+\question{Dans le cadre des deux modélisations retenues, quels sont alors le degré d’hyperstatisme et la mobilité cinématique de la chaîne fermée. Compléter le tableau du document réponse concernant les
 implications du modèle retenu sur le robot et les interactions patient / robot. Quelle modélisation vous
 parait la plus proche de la réalité ? Argumenter votre réponse.}
 
@@ -207,7 +196,7 @@ Rigidité du robot* & & \\ \hline
 \subsection*{Retour sur le cahier des charges}
 
 
-\subparagraph{}\textit{Quelle exigence le mécanisme utilisé permet-il de satisfaire ? Expliquer en 2 lignes comment cette exigence est satisfaite. }
+\question{Quelle exigence le mécanisme utilisé permet-il de satisfaire ? Expliquer en 2 lignes comment cette exigence est satisfaite. }
 
 \ifprof
 \begin{corrige}~\\

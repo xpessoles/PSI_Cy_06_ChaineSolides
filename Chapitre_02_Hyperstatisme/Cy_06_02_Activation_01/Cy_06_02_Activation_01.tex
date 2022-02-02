@@ -29,21 +29,12 @@
 }%figues de la page de garde
 
 
-\iflivret
-\input{../../style/new_pagegarde}
-\else
-\input{../../style/new_pagegarde}
-\fi
+\input{\repRel/Style/pagegarde_TD}
+\setcounter{numques}{0}
 \setlength{\columnseprule}{.1pt}
-
 \pagestyle{fancy}
 \thispagestyle{plain}
-
-\ifprof
-\vspace{5cm}
-\else
-\vspace{5cm}
-\fi
+\vspace{5.2cm}
 
 \def\columnseprulecolor{\color{ocre}}
 \setlength{\columnseprule}{0.4pt} 
@@ -104,25 +95,27 @@ Les liaisons entre les différentes classes d'équivalence permettent de modéli
 \end{center}
 
 \subsection*{Etude préliminaire}
-\subparagraph{}\textit{Tracer le graphe de structure du mécanisme.}
+\question{Tracer le graphe de structure du mécanisme.}
 
-\subparagraph{}\textit{En utilisant les formules globales de l'hyperstatisme, déterminer le degré d'hyperstatisme en utilisant la méthode statique puis la méthode cinématique.}
+\question{En utilisant les formules globales de l'hyperstatisme, déterminer le degré d'hyperstatisme en utilisant la méthode statique puis la méthode cinématique.}
 
 
 \subsection*{Étude statique}
 
-\subparagraph{}\textit{Isoler successivement les pièces 1, 2 puis 3 et réaliser le PFS en $B$, $C$ et $D$.}
+\question{Isoler successivement les pièces 1, 2 puis 3 et réaliser le PFS en $B$, $C$ et $D$.}
 
-\subparagraph{}\textit{Écrire le système d'équations. Conclure sur le rang du système d'équations et sur l'hyperstatisme du système mécanique.}
+\question{Écrire le système d'équations. Conclure sur le rang du système d'équations et sur l'hyperstatisme du système mécanique.}
 
 \subsection*{Étude cinématique}
 
-\subparagraph{}\textit{Écrire les fermetures de chaînes associées au mécanisme. }
-\subparagraph{}\textit{Écrire le système d'équations. Conclure sur le rang du système d'équations et sur l'hyperstatisme du système mécanique.}
+\question{Écrire les fermetures de chaînes associées au mécanisme. }
+
+\question{Écrire le système d'équations. Conclure sur le rang du système d'équations et sur l'hyperstatisme du système mécanique.}
 
 \subsection*{Hyperstatisme}
-\subparagraph{}\textit{Proposer des conditions géométriques permettant d'assurer l'assemblage du système. }
-\subparagraph{}\textit{Proposer une modèle isostatique cinématiquement équivalent. }
+\question{Proposer des conditions géométriques permettant d'assurer l'assemblage du système. }
+
+\question{Proposer une modèle isostatique cinématiquement équivalent. }
 
 \ifprof
 \end{multicols}
