@@ -1,0 +1,167 @@
+%%%% Paramétrage du TD %%%%
+\def\xxactivite{ \ifprof \normalsize{TD 6 -- Corrigé } \else  \ifcolle Colle \else TD 6\fi \fi} % \normalsize \vspace{-.4cm}
+\def\xxauteur{\textsl{Xavier Pessoles}}
+
+\def\xxnumchapitre{Chapitre 2 \vspace{.2cm}}
+\def\xxchapitre{\hspace{.12cm} Hyperstatisme}
+
+
+
+\def\xxcompetences{%
+\vspace{-.5cm}
+\footnotesize{
+\textsl{%
+\textbf{Savoirs et compétences :}\\
+\vspace{-.2cm}
+\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+%\item \textit{Mod2.C34} : chaînes de solides;
+\item \textit{Mod2.C34} : degré de mobilité du modèle;
+\item \textit{Mod2.C34} : degré d’hyperstatisme du modèle;
+\item \textit{Mod2.C34.SF1} : déterminer les conditions géométriques associées à l’hyperstatisme;
+\item \textit{Mod2.C34} : résoudre le système associé à la fermeture cinématique et en déduire le degré de mobilité et d’hyperstatisme.
+\end{itemize}}}}
+
+\def\xxtitreexo{Robovolc}
+\def\xxsourceexo{\hspace{.2cm} \footnotesize{X ENS -- PSI 2017}}
+
+\def\xxfigures{
+\includegraphics[width=.75\textwidth]{fig_00}
+}%figues de la page de garde
+
+
+
+
+\input{../../../style/new_pagegarde}
+
+\setlength{\columnseprule}{.1pt}
+
+\pagestyle{fancy}
+\thispagestyle{plain}
+
+\ifprof
+\vspace{5cm}
+\else
+\vspace{5cm}
+\fi
+
+\def\columnseprulecolor{\color{ocre}}
+\setlength{\columnseprule}{0.4pt} 
+
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{exo}{0}
+
+
+
+%\ifprof
+%\else
+\begin{multicols}{2}
+%\fi
+\section*{Mise en situation}
+
+
+
+
+
+\begin{obj}
+Dans cette sous-partie, on établit un modèle statique du châssis de ROBOVOLC.
+\end{obj}
+
+La mobilité sur terrain accidenté est obtenue, en plus de par la motorisation indépendante des
+roues, par l'utilisation d'un châssis articulé. Celui-ci a une structure tubulaire avec des articulations
+passives (non actionnées) permettant à ROBOVOLC de s'adapter à toute surface non plane. Une
+illustration des cinq mouvements indépendants permis par les articulations est donnée sur la
+\autoref{fig_11}.
+
+\begin{figure}[H]
+\centering
+\begin{tabular}{|p{.45\linewidth}|p{.45\linewidth}|}
+\hline
+Châssis au repos & Mouvement 1 : rotation de l'essieu avant
+autour de l'axe longitudinal  \\ \hline
+\begin{center}
+\includegraphics[width=.9\linewidth]{fig_11_a.png}
+\end{center}
+&
+\begin{center}
+\includegraphics[width=.9\linewidth]{fig_11_b.png}
+\end{center}
+\\ \hline
+Mouvement 2 :
+rotation de l'essieu central
+autour de l'axe longitudinal & Mouvement 3 :
+rotation de l'essieu arrière
+autour de l'axe longitudinal  \\ \hline
+\begin{center}
+\includegraphics[width=.9\linewidth]{fig_11_c.png}
+\end{center} 
+& 
+\begin{center}
+\includegraphics[width=.9\linewidth]{fig_11_d.png}
+\end{center} \\ \hline
+Mouvement 4 :
+rotation de l'arbre avant
+autour de l'axe transversal &
+Mouvement 5 :
+rotation de l'arbre arrière
+autour de l'axe transversal \\ \hline
+\begin{center}
+\includegraphics[width=.9\linewidth]{fig_11_e.png}
+\end{center}
+&
+\begin{center}
+\includegraphics[width=.9\linewidth]{fig_11_f.png}
+\end{center} \\ \hline
+\end{tabular}
+
+\caption{Illustration des mouvements de déformation du châssis\label{fig_11}}
+\end{figure}
+
+Le châssis est composé de cinq parties orientables les unes par rapport aux autres (\autoref{fig_12}) :
+\begin{itemize}
+\item l'essieu avant, noté EAV, reliant les roues avant 1 et 2 ;
+\item l'essieu central, noté EC, reliant les roues centrales 3 et 4 ;
+\item l'essieu arrière, noté EAR, reliant les roues arrière 5 et 6 ;
+\item l'arbre avant, noté AAV, connectant les essieux EAV et EC ;
+\item l'arbre arrière, noté AAR, connectant les essieux EC et EAR.
+\end{itemize}
+On rappelle que l'empattement entre deux essieux successifs est noté $a$, et que la distance entre
+deux roues d'un même essieu est notée $2e$.
+Les différentes parties sont reliées entre elles par des articulations possédant une raideur en
+rotation imposée. Par la suite, on supposera cette raideur négligeable devant les autres actions
+mécaniques mises en jeu.
+Un schéma cinématique de la plateforme (châssis+roues) est présenté sur la \autoref{fig_12}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=8cm]{fig_12.png}
+\caption{Schéma cinématique de la plateforme\label{fig_12}}
+\end{figure}
+
+Les deux articulations EC-AAV et EC-AAR, situées à une distance longitudinale $\pm b$ de l'essieu
+EC, autorisent une rotation selon les directions $\vect{x}$ et $\vect{y}$; elles sont modélisées par des liaisons
+rotule à doigt de centres respectifs $B$ et $C$. Les deux articulations EAV-AAV et EAR-AAR
+autorisent une rotation selon la direction $\vect{x}$ seulement ; elles sont modélisées par des liaisons
+pivot d'axe $\axe{O}{x}$.
+
+D'autre part, les six liaisons essieu-roue sont modélisées par des liaisons pivot d'axe $\axe{A}{y}$
+(roues avant), $\axe{O}{y}$ (roues centrales) ou $\axe{D}{y}$ (roues arrière). De plus, le contact de chaque
+roue i avec le sol est modélisé en première approche par une liaison ponctuelle de normale
+$\axe{P_i}{z}$.
+
+On considère dans les questions \ref{q3.1} et \ref{q3.2} que les liaisons sont parfaites sans frottements.
+
+
+\question{ \label{q3.1} Déterminer le nombre de mobilités du modèle du système.}
+
+\question{ \label{q3.2} Montrer que le modèle est isostatique. Conclure quant à la capacité du châssis à maintenir
+les roues au contact du sol en toute circonstance.}
+
+\question{ \label{q3.3} Proposer un modèle de liaison parfaite pour le contact roue-sol qui permet de tenir compte,
+dans une étude de statique sans glissement, du frottement longitudinal et transversal. Peut-on
+calculer toutes les inconnues statiques de liaison dans ce cas ?}
+
+
+
+
+\end{multicols}
