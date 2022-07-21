@@ -29,13 +29,7 @@
 }%figues de la page de garde
 
 
-
-
-\iflivret
-\input{../../style/new_pagegarde}
-\else
-\input{../../style/new_pagegarde}
-\fi
+\input{\repRel/Style/pagegarde_TD}
 \setlength{\columnseprule}{.1pt}
 
 \pagestyle{fancy}
@@ -62,7 +56,7 @@
 %\fi
 \section*{Mise en situation}
 
-
+\setcounter{numques}{0}
 
 
 
@@ -102,7 +96,7 @@ donné dans la figure suivante.
 \end{center}
 
 
-\subparagraph{}\textit{En considérant que le modèle est spatial, donner le graphe de structure (graphe des liaisons) associé au schéma cinématique proposé en précisant les éléments géométriques caractéristiques de chaque liaison puis
+\question{En considérant que le modèle est spatial, donner le graphe de structure (graphe des liaisons) associé au schéma cinématique proposé en précisant les éléments géométriques caractéristiques de chaque liaison puis
 la forme de leur torseur cinématique $\torseurcin{V}{j}{i}$, c'est-à-dire l'expression des éléments de réduction en fonction des paramètres $p_{ij}$, $q_{ij}$, $r_{ij}$, $u_{ij}$, $v_{ij}$ et $w_{ij}$ dans la base locale de la liaison.}
 \ifprof
 \begin{corrige}~\\
@@ -110,7 +104,7 @@ la forme de leur torseur cinématique $\torseurcin{V}{j}{i}$, c'est-à-dire l'ex
 \else
 \fi
 
-\subparagraph{}\textit{Établir le système de six équations, en projection dans la base $\mathcal{B}_{3}$ liée au solide 3, traduisant la fermeture cinématique du mécanisme, en fonction des paramètres cinématiques introduits à la question précédente et des paramètres géométriques définis sur la figure précédente.}
+\question{Établir le système de six équations, en projection dans la base $\mathcal{B}_{3}$ liée au solide 3, traduisant la fermeture cinématique du mécanisme, en fonction des paramètres cinématiques introduits à la question précédente et des paramètres géométriques définis sur la figure précédente.}
 \ifprof
 \begin{corrige}~\\
 \end{corrige}
@@ -118,7 +112,7 @@ la forme de leur torseur cinématique $\torseurcin{V}{j}{i}$, c'est-à-dire l'ex
 \fi
 
 
-\subparagraph{}\textit{Évaluer le rang du système d'équations obtenu et en déduire le degré de mobilité du mécanisme. On supposera
+\question{Évaluer le rang du système d'équations obtenu et en déduire le degré de mobilité du mécanisme. On supposera
 que le paramètre cinématique d'entrée $w_{21}$ est connu et que l'angle $\beta$ est différent de zéro.
 Si on fait l'hypothèse que les liaisons sont parfaites, ce modèle est-il hyperstatique ?}
 \ifprof
@@ -141,21 +135,21 @@ On cherche ici à montrer qu'il est impossible d'obtenir ce double contact avec 
 
 
 
-\subparagraph{\label{q4}}\textit{En vous appuyant sur les résultats précédents et en supposant que les angles $\beta$ et $\beta'$ sont différents de zéro, donner la valeur du degré de mobilité de ce modèle puis son degré d'hyperstatisme. Que concluez-vous de ces résultats ? On notera $\torseurcin{V}{`3}{2}$ le torseur cinématique de la liaison sphère-plan de centre $J$ dont on précisera la normale.}
+\question{En vous appuyant sur les résultats précédents et en supposant que les angles $\beta$ et $\beta'$ sont différents de zéro, donner la valeur du degré de mobilité de ce modèle puis son degré d'hyperstatisme. Que concluez-vous de ces résultats ? On notera $\torseurcin{V}{`3}{2}$ le torseur cinématique de la liaison sphère-plan de centre $J$ dont on précisera la normale.}
 \ifprof
 \begin{corrige}~\\
 \end{corrige}
 \else
 \fi
 
-\subparagraph{}\textit{En supposant que les normales, à préciser, aux liaisons sphère-plan, de centres $I$ et $J$, sont concourantes au point que l'on notera $I_{32}$, déterminer, en utilisant l'équivalence statique, la liaison équivalente entre les solides 3 et 2 au point $I_{32}$.}
+\question{En supposant que les normales, à préciser, aux liaisons sphère-plan, de centres $I$ et $J$, sont concourantes au point que l'on notera $I_{32}$, déterminer, en utilisant l'équivalence statique, la liaison équivalente entre les solides 3 et 2 au point $I_{32}$.}
 \ifprof
 \begin{corrige}~\\
 \end{corrige}
 \else
 \fi
 
-\subparagraph{}\textit{Compléter le schéma cinématique avec la liaison équivalente.}
+\question{Compléter le schéma cinématique avec la liaison équivalente.}
 \ifprof
 \begin{corrige}~\\
 \end{corrige}
@@ -166,14 +160,14 @@ On cherche ici à montrer qu'il est impossible d'obtenir ce double contact avec 
 %\textit{}
 \end{center}
 
-\subparagraph{}\textit{Calculer le degré de mobilité du mécanisme ainsi modélisé et comparer cette valeur à celle trouvée à la question \ref{q4}, en supposant les valeurs de $a$ et $b$ quelconques, définies par $\vect{AI}_{32}=a\vect{x_1}+b\vect{y_1}$.}
+\question{Calculer le degré de mobilité du mécanisme ainsi modélisé et comparer cette valeur à celle trouvée à la question \ref{q4}, en supposant les valeurs de $a$ et $b$ quelconques, définies par $\vect{AI}_{32}=a\vect{x_1}+b\vect{y_1}$.}
 \ifprof
 \begin{corrige}~\\
 \end{corrige}
 \else
 \fi
 
-\subparagraph{}\textit{Indiquer à quelle condition sur a et/ou b, le degré de mobilité serait égal à 1. Commentez ce résultat en regard de l'objectif énoncé plus haut.}
+\question{Indiquer à quelle condition sur a et/ou b, le degré de mobilité serait égal à 1. Commentez ce résultat en regard de l'objectif énoncé plus haut.}
 \ifprof
 \begin{corrige}~\\
 \end{corrige}
@@ -193,7 +187,7 @@ le contact en $J$.
 %\textit{}
 \end{center}
 
-\subparagraph{}\textit{Expliquer et effectuer, le tracé permettant de trouver exactement la position du
+\question{Expliquer et effectuer, le tracé permettant de trouver exactement la position du
 point de contact $J$, entre la surface sphérique de la tige de commande et le profil bombé de la griffe, obtenu
 dans la position représentée.}
 \ifprof
@@ -204,7 +198,7 @@ dans la position représentée.}
 
 
 
-\subparagraph{}\textit{Le bureau d'étude a finalement décidé de conserver les deux rampes rectilignes repérées $\Delta I$ et $\Delta J$ sur la figure. Quelle conséquence a ce choix sur le fonctionnement du mécanisme d'accrochage ?
+\question{Le bureau d'étude a finalement décidé de conserver les deux rampes rectilignes repérées $\Delta I$ et $\Delta J$ sur la figure. Quelle conséquence a ce choix sur le fonctionnement du mécanisme d'accrochage ?
 Peut-on valider le critère étudié de la FT 2.1.1 ?}
 \ifprof
 \begin{corrige}~\\
@@ -222,7 +216,7 @@ sphère-plan de centre $I$ n'est pas parfaite avec un coefficient de frottement 
 négligeable le poids de la griffe 3 devant les actions mécaniques transmises. On précise que $d=\SI{10}{mm}$ et que
 y varie entre 20 et \SI{32}{mm}.
 
-\subparagraph{}\textit{Préciser, en justifiant votre réponse, si un phénomène d'arc-boutement peut se produire au cours du mouvement
+\question{Préciser, en justifiant votre réponse, si un phénomène d'arc-boutement peut se produire au cours du mouvement
 de la griffe ? Peut-on valider la solution proposée ?}
 \ifprof
 \begin{corrige}~\\
