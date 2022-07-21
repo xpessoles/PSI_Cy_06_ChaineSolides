@@ -1,0 +1,75 @@
+%%%% Paramétrage du TD %%%%
+\def\xxactivite{ \ifprof \normalsize{Application 1 -- Corrigé } \else  \ifcolle Colle \else Application 1\fi \fi} % \normalsize \vspace{-.4cm}
+\def\xxauteur{\textsl{Xavier Pessoles}}
+
+
+\def\xxnumchapitre{Chapitre 1 \vspace{.2cm}}
+\def\xxchapitre{\hspace{.12cm} Détermination des liaisons équivalentes}
+
+
+\def\xxcompetences{%
+\textsl{%
+\textbf{Savoirs et compétences :}\\
+\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+\item B2-15 : Simplifier un modèle de mécanisme.
+%\item \textit{Mod2.C34} : degré de mobilité du modèle;
+%\item \textit{Mod2.C34} : degré d’hyperstatisme du modèle;
+%\item \textit{Mod2.C34.SF1} : déterminer les conditions géométriques associées à l’hyperstatisme;
+%\item \textit{Mod2.C34} : résoudre le système associé à la fermeture cinématique et en déduire le degré de mobilité et d’hyperstatisme.
+\end{itemize}
+}}
+
+
+\def\xxtitreexo{Conception de la commande d’un robot chirurgical}
+\def\xxsourceexo{\hspace{.2cm} \footnotesize{CCS PSI -- 2015}}
+
+
+\def\xxfigures{
+\includegraphics[width=.7\linewidth]{fig_00}
+}%figues de la page de garde
+
+
+\input{\repRel/Style/pagegarde_TD}
+\setcounter{numques}{0}
+\setlength{\columnseprule}{.1pt}
+\pagestyle{fancy}
+\thispagestyle{plain}
+\vspace{5.2cm}
+
+\def\columnseprulecolor{\color{ocre}}
+\setlength{\columnseprule}{0.4pt} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{exo}{0}
+
+
+\ifprof
+\begin{multicols}{2}
+\else
+\begin{multicols}{2}
+\fi
+
+On s'intéresse au bras esclave d'un robot chirurgical. On donne le schéma cinématique partiel du bras esclave.
+
+
+
+
+
+\question{Déterminer la liaison équivalente des liaisons suivantes.}
+
+
+\begin{center}
+\includegraphics[width=\linewidth]{fig_01.png}
+\hspace{1cm}
+\includegraphics[width=.25\linewidth]{fig_02.png}
+\end{center}
+
+\ifprof
+\end{multicols}
+\else
+\end{multicols}
+\fi
+
+
