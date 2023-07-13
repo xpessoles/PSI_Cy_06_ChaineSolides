@@ -1,34 +1,66 @@
-%\setchapterimage{bandeau}
-\chapter*{Application \arabic{cptApplication} :\\ 
-Pompe à pistons axiaux -- \ifprof Corrigé \else Sujet \fi}
-\addcontentsline{toc}{section}{Application \arabic{cptApplication} : Pompe à pistons axiaux -- \ifprof Corrigé \else Sujet \fi}
+%%%% Paramétrage du TD %%%%
+\def\xxactivite{ \ifprof \normalsize{Activation 1 -- Corrigé } \else  \ifcolle Colle \else Activation 1\fi \fi} % \normalsize \vspace{-.4cm}
+\def\xxauteur{\textsl{Xavier Pessoles}}
 
-\iflivret \stepcounter{cptApplication} \else
-\ifprof  \stepcounter{cptApplication} \else \fi
+
+\def\xxnumchapitre{Chapitre 2 \vspace{.2cm}}
+\def\xxchapitre{\hspace{.12cm} Hyperstatisme}
+
+
+
+\def\xxcompetences{%
+\textsl{%
+\textbf{Savoirs et compétences :}\\
+\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+\item \textit{Mod2.C34} : chaînes de solides.
+%\item \textit{Mod2.C34} : degré de mobilité du modèle;
+%\item \textit{Mod2.C34} : degré d’hyperstatisme du modèle;
+%\item \textit{Mod2.C34.SF1} : déterminer les conditions géométriques associées à l’hyperstatisme;
+%\item \textit{Mod2.C34} : résoudre le système associé à la fermeture cinématique et en déduire le degré de mobilité et d’hyperstatisme.
+\end{itemize}
+}}
+
+\def\xxtitreexo{Activation -- Pompe à pistons axiaux}
+\def\xxsourceexo{\hspace{.2cm} \footnotesize{\'E. Durif}}
+
+
+\def\xxfigures{
+%\includegraphics[width=.7\linewidth]{axe_y_photo}
+}%figues de la page de garde
+
+
+\input{\repRel/Style/pagegarde_TD}
+\setcounter{numques}{0}
+\setlength{\columnseprule}{.1pt}
+\pagestyle{fancy}
+\thispagestyle{plain}
+\vspace{5.2cm}
+
+\def\columnseprulecolor{\color{ocre}}
+\setlength{\columnseprule}{0.4pt} 
+
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{exo}{0}
+\ifprof
+\else
+
+
+\ifprof
+\begin{multicols}{2}
+\else
+\begin{multicols}{2}
 \fi
 
-\setcounter{question}{0}
-\marginnote{D'après \'E. Durif.}
-\marginnote{
-\UPSTIcompetence[2]{B2-16}
-}
-
-%\begin{marginfigure}
-%
-%\end{marginfigure}
-
-
-
 \subsection*{Présentation}
-On considère, la pompe à pistons axiaux suivante. Nous avons retenu une modélisation avec 4 classes d'équivalence y compris le bâti.
+Nous prendrons comme exemple dans ce cours, la pompe à pistons axiaux. Nous avons retenu une modélisation avec 4 classes d'équivalence y compris le bâti :
 
-\marginnote{
 \begin{itemize}
 \item 0 : bâti;
 \item 1 : barillet;
 \item 2 : piston;
 \item 3 : poussoir.
-\end{itemize}}
+\end{itemize}
 
 On note $n$ le nombre de classes d'équivalence hors bâti (ici $n=3$).
 Dans cette étude, on se place directement dans la base $B_{1}=\base{{x_{1}}}{{y_{1}}}{{z_{1}}}$ qui est en rotation par rapport à la base $B_{O}=\base{{x_{0}}}{{y_{0}}}{{z_{0}}}$ autour de l'axe $\vect{z_{0}}=\vect{z_{1}}$ avec le paramètre de rotation $\theta$.
@@ -37,11 +69,12 @@ On donne également :
 $\vect{AB}=L_1\vect{z_0}$, $\vect{BC}=-R\vect{x_1}$, $\vect{CD}=\lambda\vect{z_1}$, $\vect{DE}=h\vect{z_{1*}}$.
 
 
-\begin{figure}[H]
-  \includegraphics[width=.7\linewidth]{pompe.pdf}
+\begin{center}
+  \includegraphics[width=.9\linewidth]{pompe.pdf}
   
-  \caption{Schéma technologique d'une pompe à pistons axiaux \label{fig:techno_pompe}}
-\end{figure}
+  \textit{Schéma technologique d'une pompe à pistons axiaux \label{fig:techno_pompe}}
+
+\end{center}
 
 
 Les liaisons entre les différentes classes d'équivalence permettent de modéliser le système avec le schéma cinématique ci-après.
@@ -55,11 +88,11 @@ Les liaisons entre les différentes classes d'équivalence permettent de modéli
 \end{itemize}
 
 
-\begin{figure}[H]
- \includegraphics[width=.7\linewidth]{pompe_cine.pdf}
+\begin{center}
+ \includegraphics[width=.9\linewidth]{pompe_cine.pdf}
  
- \caption{Schéma cinématique d'une pompe à pistons axiaux \label{fig:cine_pompe}}
-\end{figure}
+ \textit{Schéma cinématique d'une pompe à pistons axiaux \label{fig:cine_pompe}}
+\end{center}
 
 \subsection*{Etude préliminaire}
 \question{Tracer le graphe de structure du mécanisme.}
@@ -84,7 +117,12 @@ Les liaisons entre les différentes classes d'équivalence permettent de modéli
 
 \question{Proposer une modèle isostatique cinématiquement équivalent. }
 
-
+\ifprof
+\end{multicols}
+\else
+\end{multicols}
+\fi
+\fi
 
 
 
