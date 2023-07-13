@@ -1,61 +1,28 @@
-%%%% Paramétrage du TD %%%%
-\def\xxactivite{ \ifprof \normalsize{Application 1 -- Corrigé } \else  \ifcolle Colle \else Application 1\fi \fi} % \normalsize \vspace{-.4cm}
-\def\xxauteur{\textsl{Xavier Pessoles}}
+%\setchapterimage{bandeau}
+\chapter*{Application \arabic{cptApplication} :\\ 
+Liaisons équivalentes -- \ifprof Corrigé \else Sujet \fi}
+\addcontentsline{toc}{section}{Application \arabic{cptApplication} : Liaisons équivalentes -- \ifprof Corrigé \else Sujet \fi}
 
-
-\def\xxnumchapitre{Chapitre 1 \vspace{.2cm}}
-\def\xxchapitre{\hspace{.12cm} Détermination des liaisons équivalentes}
-
-
-\def\xxcompetences{%
-\textsl{%
-\textbf{Savoirs et compétences :}\\
-\begin{itemize}[label=\ding{112},font=\color{ocre}] 
-\item B2-15 : Simplifier un modèle de mécanisme.
-%\item \textit{Mod2.C34} : degré de mobilité du modèle;
-%\item \textit{Mod2.C34} : degré d’hyperstatisme du modèle;
-%\item \textit{Mod2.C34.SF1} : déterminer les conditions géométriques associées à l’hyperstatisme;
-%\item \textit{Mod2.C34} : résoudre le système associé à la fermeture cinématique et en déduire le degré de mobilité et d’hyperstatisme.
-\end{itemize}
-}}
-
-
-\def\xxtitreexo{Application 01}
-\def\xxsourceexo{\hspace{.2cm} \footnotesize{P. Dupas}}
-
-
-\def\xxfigures{
-%\includegraphics[width=.7\linewidth]{axe_y_photo}
-}%figues de la page de garde
-
-
-\input{\repRel/Style/pagegarde_TD}
-\setcounter{numques}{0}
-\setlength{\columnseprule}{.1pt}
-\pagestyle{fancy}
-\thispagestyle{plain}
-\vspace{5.2cm}
-
-\def\columnseprulecolor{\color{ocre}}
-\setlength{\columnseprule}{0.4pt} 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%
-
-\setcounter{exo}{0}
-
-
-\ifprof
-\begin{multicols}{2}
-\else
-\begin{multicols}{2}
+\iflivret \stepcounter{cptApplication} \else
+\ifprof  \stepcounter{cptApplication} \else \fi
 \fi
+
+\setcounter{question}{0}
+\marginnote{D'après P. Dupas.}
+%\marginnote[1cm]{
+%\UPSTIcompetence[2]{B2-10}
+%}
+%\begin{marginfigure}
+%\centering
+%\includegraphics[width=4cm]{fig_00}
+%\end{marginfigure}
+
 
 
 \subsection*{Liaisons en parallèle}
 
 \question{Déterminer la liaison équivalente des liaisons suivantes.}
-
+\begin{multicols}{2}
 \begin{center}
 \includegraphics[width=.8\linewidth]{fig_01.png}
 \end{center}
@@ -88,6 +55,8 @@
 \includegraphics[width=.8\linewidth]{fig_08.png}
 \end{center}
 
+
+
 \begin{center}
 \includegraphics[width=.5\linewidth]{fig_09.png}
 \end{center}
@@ -96,22 +65,16 @@
 \includegraphics[width=.8\linewidth]{fig_10.png}
 \end{center}
 
-
+\end{multicols}
 \subsection*{Liaisons en série}
 
 \question{Déterminer la liaison équivalente des liaisons suivantes.}
 
-
+\begin{multicols}{2}
 \begin{center}
 \includegraphics[width=.3\linewidth]{fig_11.png}
-\hspace{1cm}
+\end{center}
+\begin{center}
 \includegraphics[width=.25\linewidth]{fig_12.png}
 \end{center}
-
-\ifprof
 \end{multicols}
-\else
-\end{multicols}
-\fi
-
-
