@@ -1,25 +1,57 @@
-%\setchapterimage{bandeau}
-\chapter*{Application \arabic{cptApplication} :\\ 
-Pompe à pistons axiaux -- \ifprof Corrigé \else Sujet \fi}
-\addcontentsline{toc}{section}{Application \arabic{cptApplication} : Pompe à pistons axiaux -- \ifprof Corrigé \else Sujet \fi}
+%%%% Paramétrage du TD %%%%
+\def\xxactivite{ \ifprof \normalsize{Application 1 -- Corrigé } \else  \ifcolle Colle \else Application 1\fi \fi} % \normalsize \vspace{-.4cm}
+\def\xxauteur{\textsl{Xavier Pessoles}}
 
-\iflivret \stepcounter{cptApplication} \else
-\ifprof  \stepcounter{cptApplication} \else \fi
-\fi
+\def\xxnumchapitre{Chapitre 2 \vspace{.2cm}}
+\def\xxchapitre{\hspace{.12cm} Hyperstatisme}
 
-\setcounter{question}{0}
-\marginnote{Pôle Chateaubriand -- Joliot-Curie.}
-\marginnote{
-\UPSTIcompetence[2]{B2-16}
-}
 
-%\begin{marginfigure}
-%
-%\end{marginfigure}
 
+\def\xxcompetences{%
+\vspace{-.5cm}
+\footnotesize{
+\textsl{%
+\textbf{Savoirs et compétences :}\\
+\vspace{-.2cm}
+\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+\item \textit{Mod2.C34} : chaînes de solides;
+\item \textit{Mod2.C34} : degré de mobilité du modèle;
+\item \textit{Mod2.C34} : degré d’hyperstatisme du modèle;
+\item \textit{Mod2.C34.SF1} : déterminer les conditions géométriques associées à l’hyperstatisme;
+\item \textit{Mod2.C34} : résoudre le système associé à la fermeture cinématique et en déduire le degré de mobilité et d’hyperstatisme.
+\end{itemize}}}}
+
+
+\def\xxtitreexo{Application 01}
+\def\xxsourceexo{\hspace{.2cm} \footnotesize{}}%Xavier Pessoles}}
+
+
+\def\xxfigures{
+%\includegraphics[width=.7\linewidth]{axe_y_photo}
+}%figues de la page de garde
+
+\input{\repRel/Style/pagegarde_TD}
+\setcounter{numques}{0}
+\setlength{\columnseprule}{.1pt}
+\pagestyle{fancy}
+\thispagestyle{plain}
+\vspace{5.2cm}
+
+\def\columnseprulecolor{\color{ocre}}
+\setlength{\columnseprule}{0.4pt} 
+
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{exo}{0}
+
+
+\begin{multicols}{2}
 
 \subsection*{Exercice 1 --Applications directes}
-
+\setcounter{exo}{0}
+\begin{flushright}
+\textit{Pôle Chateaubriand -- Joliot-Curie.}
+\end{flushright}
 
 
 \question{Pour chacun des mécanismes suivants, déterminer le degré d'hyperstatisme.}
@@ -30,37 +62,54 @@ Pompe à pistons axiaux -- \ifprof Corrigé \else Sujet \fi}
 \item des conditions d'assemblage (intuitivement);
 \item un modèle isostatique.
 \end{itemize}}
-\begin{table*}[!h]
-\begin{multicols}{3}
-\includegraphics[width=.8\linewidth]{fig_01.png}
-\includegraphics[width=.8\linewidth]{fig_02.png}
-\includegraphics[width=.8\linewidth]{fig_03.png}
-\includegraphics[width=.8\linewidth]{fig_04.png}
-\includegraphics[width=.8\linewidth]{fig_05.png}
-\includegraphics[width=.8\linewidth]{fig_07.png}
-\includegraphics[width=.8\linewidth]{fig_08.png}
-\includegraphics[width=.8\linewidth]{fig_09.png}
-\includegraphics[width=.8\linewidth]{fig_10.png}
-\end{multicols}
-\end{table*}
+
+\begin{center}
+\includegraphics[width=.6\linewidth]{fig_01.png}
+\end{center}
+
+\begin{center}
+\includegraphics[width=.45\linewidth]{fig_02.png}
+\includegraphics[width=.45\linewidth]{fig_03.png}
+\end{center}
+
+\begin{center}
+\includegraphics[width=.45\linewidth]{fig_04.png}
+\includegraphics[width=.45\linewidth]{fig_05.png}
+\end{center}
+
+%\begin{center}
+%\includegraphics[width=.4\linewidth]{fig_06.png}
+%\end{center}
+
+\begin{center}
+\includegraphics[width=.45\linewidth]{fig_07.png}
+\includegraphics[width=.45\linewidth]{fig_08.png}
+\end{center}
+
+\begin{center}
+\includegraphics[width=.45\linewidth]{fig_09.png}
+\includegraphics[width=.45\linewidth]{fig_10.png}
+\end{center}
+
 
 
 \subsection*{Exercice 2 -- Déphasage d'arbre à cames}
-
-\marginnote{Banque PT SIA -- 2008.}
-
+\setcounter{exo}{0}
+\begin{flushright}
+\textit{Banque PT SIA -- 2008.}
+\end{flushright}
 
 L'optimisation d'un moteur 4 temps passe (entre autre) par une bonne maîtrise des lois de levée des soupapes. Il est ainsi possible de positionner entre la poulie \textbf{1} (entraînée par le vilebrequin via une chaîne) et l'arbre à came  \textbf{2} un système permettant de créer un déphasage entre ces pièces. 
 
-\begin{marginfigure}
-\includegraphics[width=\linewidth]{calage_1.png}
-\end{marginfigure}
+\begin{center}
+\includegraphics[width=.9\linewidth]{calage_1.png}
+\end{center}
 
 On propose ci-dessous un modèle cinématique du système de déphasage. On retrouve la culasse \textbf{0}, la poulie d’entraînement \textbf{1}, l'arbre à cames \textbf{2}, le piston \textbf{3} et le coulisseau \textbf{4}. 
 
 
 \begin{center}
-\includegraphics[width=.8\linewidth]{calage_2.png}
+\includegraphics[width=\linewidth]{calage_2.png}
 \end{center}
 
 \question{Établir le graphe des liaisons du mécanisme.}
@@ -74,8 +123,7 @@ On propose ci-dessous un modèle cinématique du système de déphasage. On retr
 \end{corrige}\else\fi
 
 \subsection*{Exercice 3 -- Simulateur de vol pour la formation de pilotes en aéroclub}
-
-
+\setcounter{exo}{0}
 \begin{flushright}
 \textit{Centrale Supelec 2017 -- PSI.}
 \end{flushright}
@@ -86,16 +134,16 @@ On s’intéresse à un simulateur de vol à plate-forme dynamique.
 %\end{center}
 Deux moteurs permettent d'assurer le mouvement de tangage.  Ils entraînent respectivement les liaisons pivots de centres $H$ et $O$. 
 
-\begin{marginfigure}
+\begin{center}
 \includegraphics[width=\linewidth]{aero_04.png}
-\end{marginfigure}
+\end{center}
 
 On propose le modèle plan suivant (la pièce 6 est en traits pointillés pour la démarquer des autres pièces).
 
 \question{Déterminer le degré d'hyperstatisme du modèle proposé.}
 
 \begin{center}
-\includegraphics[width=.8\linewidth]{aero_06.png}
+\includegraphics[width=\linewidth]{aero_06.png}
 \end{center}
 
 %\subsection*{Exercice 4 -- Chariot élévateur de bateaux}
@@ -120,38 +168,36 @@ On propose le modèle plan suivant (la pièce 6 est en traits pointillés pour l
 
 
 \subsection*{Exercice 5 -- Pousseur de tablier}
-
-\marginnote{Banque PT 2008 -- SIC.}
-
-
+\setcounter{exo}{0}
+\begin{flushright}
+\textit{Banque PT 2008 -- SIC.}
+\end{flushright}
 
 Une technique pour construire un pont et de commencer par ériger les piles définitives en béton et les piles
 temporaires en acier. On peut alors assembler tronçon par tronçon, les 2 tabliers sur la terre ferme et enfin
 pousser les deux parties du tablier assemblées sur les piles afin de réaliser la jonction.
 Cette opération de poussée est réalisée à l’aide de systèmes hydrauliques nommés « pousseurs
 de tablier ». 
-\begin{marginfigure}
-\centering
+
+\begin{center}
 \includegraphics[width=.6\linewidth]{viaduc_01.png}
-\end{marginfigure}
+\end{center}
 
 Le pousseur de tablier est soutenu par plusieurs vérins de balancelle verticaux (non étudiés) qui assurent le positionnement de la semelle afin que la cale de poussée soit parallèle et à la bonne distance du plan inférieur du tablier. 
-
-\begin{marginfigure}
+\begin{center}
 \includegraphics[width=\linewidth]{viaduc_02.png}
-\end{marginfigure}
-
+\end{center}
 
 On suppose dans cette partie, que l’angle que fait le plan supérieur de la cale de levage avec
 l’horizontale est petit. Ce qui revient à considérer que les contacts dans les liaisons planes sont
 maintenus durant tout le mouvement.
 Une première étude conduit à la modélisation suivante.
 
-\begin{marginfigure}
+\begin{center}
 \includegraphics[width=\linewidth]{viaduc_03.png}
-\end{marginfigure}
+\end{center}
 
-\question{Proposer un modèle pour tenir compte de l'hypothèse des angles <<~petits~>>.}
+\question{Proposer un modèle pour tenir compte de l'hypothèse des angles << petits >>.}
 \ifprof
 \begin{corrige}
 \end{corrige}\else\fi
@@ -175,12 +221,6 @@ nouveau schéma cinématique tenant compte de ces modifications.}
 \end{corrige}\else\fi
 
 
-
-\begin{marginfigure}
-\includegraphics[width=.8\linewidth]{viaduc_04.png}
-\end{marginfigure}
-
-
 \question{Le constructeur a fait le choix de mettre
 une liaison glissière de direction horizontale à la place de
 la liaison plane entre la cale de levage (2) et la semelle (3)
@@ -190,24 +230,29 @@ peut-on rendre ce modèle isostatique ?}
 \begin{corrige}
 \end{corrige}\else\fi
 
+\begin{center}
+\includegraphics[width=.8\linewidth]{viaduc_04.png}
+\end{center}
+
 
 
 \subsection*{Exercice 6 -- Planeur sous marin}
-
-\marginnote{Banque PT 2012 -- SIC.}
-
-\begin{marginfigure}
-\includegraphics[width=.8\linewidth]{plan_01.png}
-\end{marginfigure}
+\setcounter{exo}{0}
+\begin{flushright}
+\textit{Banque PT 2012 -- SIC.}
+\end{flushright}
 
 Le planeur sous-marin est un dispositif autonome développé par l'IFREMER dont le but est de réaliser des mesures océanographiques. Il ressemble à un mini sous-marin qui plane en dents de scie vers un point prédéfini. Il remonte régulièrement à la surface afin de communiquer avec son opérateur par satellite afin d'envoyer les données acquises pendant sa plongée pour évaluer sa dérive due aux courants. 
 
 
 Dans le but de modifier l'orientation et l'équilibrage du planeur, l apartie centrale du planeur comporte un dispositif qui permet de positionner le centre de gravité axialement \textbf{24} et radialement \textbf{11}. 
 
+\begin{center}
+\includegraphics[width=.8\linewidth]{plan_01.png}
+\end{center}
 
 \begin{center}
-\includegraphics[width=.6\linewidth]{plan_02.png}
+\includegraphics[width=.8\linewidth]{plan_02.png}
 \end{center}
 
 
@@ -225,3 +270,4 @@ On supposera que la liaison entre deux roues dentées est une liaison ponctuelle
 \end{corrige}\else\fi
 
 
+\end{multicols}
