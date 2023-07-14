@@ -1,23 +1,66 @@
-%\setchapterimage{bandeau}
-\chapter*{TD \arabic{cptTD} :\\ 
-Robovolc -- \ifprof Corrigé \else Sujet \fi}
-\addcontentsline{toc}{section}{TD \arabic{cptTD} : Robovolc -- \ifprof Corrigé \else Sujet \fi}
+%%%% Paramétrage du TD %%%%
+\def\xxactivite{ \ifprof \normalsize{TD 6 -- Corrigé } \else  \ifcolle Colle \else TD 6\fi \fi} % \normalsize \vspace{-.4cm}
+\def\xxauteur{\textsl{Xavier Pessoles}}
 
-\iflivret \stepcounter{cptTD} \else
-\ifprof  \stepcounter{cptTD} \else \fi
+\def\xxnumchapitre{Chapitre 2 \vspace{.2cm}}
+\def\xxchapitre{\hspace{.12cm} Hyperstatisme}
+
+
+
+\def\xxcompetences{%
+\vspace{-.5cm}
+\footnotesize{
+\textsl{%
+\textbf{Savoirs et compétences :}\\
+\vspace{-.2cm}
+\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+%\item \textit{Mod2.C34} : chaînes de solides;
+\item \textit{Mod2.C34} : degré de mobilité du modèle;
+\item \textit{Mod2.C34} : degré d’hyperstatisme du modèle;
+\item \textit{Mod2.C34.SF1} : déterminer les conditions géométriques associées à l’hyperstatisme;
+\item \textit{Mod2.C34} : résoudre le système associé à la fermeture cinématique et en déduire le degré de mobilité et d’hyperstatisme.
+\end{itemize}}}}
+
+\def\xxtitreexo{Robovolc}
+\def\xxsourceexo{\hspace{.2cm} \footnotesize{X ENS -- PSI 2017}}
+
+\def\xxfigures{
+\includegraphics[width=.75\textwidth]{fig_00}
+}%figues de la page de garde
+
+
+
+
+\input{../../../style/new_pagegarde}
+
+\setlength{\columnseprule}{.1pt}
+
+\pagestyle{fancy}
+\thispagestyle{plain}
+
+\ifprof
+\vspace{5cm}
+\else
+\vspace{5cm}
 \fi
 
-\setcounter{question}{0}
-\marginnote{X ENS -- PSI 2017.}
-\marginnote{
-\UPSTIcompetence[2]{B2-16}
-}
-%
-%\begin{marginfigure}
-%\includegraphics[width=\linewidth]{fig_00}
-%\end{marginfigure}
+\def\columnseprulecolor{\color{ocre}}
+\setlength{\columnseprule}{0.4pt} 
 
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{exo}{0}
+
+
+
+%\ifprof
+%\else
+\begin{multicols}{2}
+%\fi
 \section*{Mise en situation}
+
+
+
 
 
 \begin{obj}
@@ -30,16 +73,12 @@ passives (non actionnées) permettant à ROBOVOLC de s'adapter à toute surface 
 illustration des cinq mouvements indépendants permis par les articulations est donnée sur la
 \autoref{fig_11}.
 
-
-
-
-
-
 \begin{figure}[H]
 \centering
 \begin{tabular}{|p{.45\linewidth}|p{.45\linewidth}|}
 \hline
- &  \\ \hline
+Châssis au repos & Mouvement 1 : rotation de l'essieu avant
+autour de l'axe longitudinal  \\ \hline
 \begin{center}
 \includegraphics[width=.9\linewidth]{fig_11_a.png}
 \end{center}
@@ -125,3 +164,4 @@ calculer toutes les inconnues statiques de liaison dans ce cas ?}
 
 
 
+\end{multicols}
