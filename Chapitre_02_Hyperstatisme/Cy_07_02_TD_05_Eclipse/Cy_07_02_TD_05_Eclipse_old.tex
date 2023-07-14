@@ -1,21 +1,63 @@
-%\setchapterimage{bandeau}
-\chapter*{TD \arabic{cptTD} :\\ 
-Système d'inspection pour tubes de guidage -- \ifprof Corrigé \else Sujet \fi}
-\addcontentsline{toc}{section}{TD \arabic{cptTD} : Système d'inspection pour tubes de guidage -- \ifprof Corrigé \else Sujet \fi}
+%%%% Paramétrage du TD %%%%
+\def\xxactivite{ \ifprof \normalsize{TD 5 -- Corrigé } \else  \ifcolle Colle \else TD 5\fi \fi} % \normalsize \vspace{-.4cm}
+\def\xxauteur{\textsl{Xavier Pessoles}}
 
-\iflivret \stepcounter{cptTD} \else
-\ifprof  \stepcounter{cptTD} \else \fi
+\def\xxnumchapitre{Chapitre 2 \vspace{.2cm}}
+\def\xxchapitre{\hspace{.12cm} Hyperstatisme}
+
+
+
+\def\xxcompetences{%
+\vspace{-.5cm}
+\footnotesize{
+\textsl{%
+\textbf{Savoirs et compétences :}\\
+\vspace{-.2cm}
+\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+%\item \textit{Mod2.C34} : chaînes de solides;
+\item \textit{Mod2.C34} : degré de mobilité du modèle;
+\item \textit{Mod2.C34} : degré d’hyperstatisme du modèle;
+\item \textit{Mod2.C34.SF1} : déterminer les conditions géométriques associées à l’hyperstatisme;
+\item \textit{Mod2.C34} : résoudre le système associé à la fermeture cinématique et en déduire le degré de mobilité et d’hyperstatisme.
+\end{itemize}}}}
+
+\def\xxtitreexo{Système d'inspection pour tubes de guidage}
+\def\xxsourceexo{\hspace{.2cm} \footnotesize{Banque PT -- SIA 2009}}
+
+\def\xxfigures{
+\includegraphics[width=.75\textwidth]{fig_00}
+}%figues de la page de garde
+
+
+\input{\repRel/Style/pagegarde_TD}
+\setlength{\columnseprule}{.1pt}
+
+\pagestyle{fancy}
+\thispagestyle{plain}
+
+\ifprof
+\vspace{5cm}
+\else
+\vspace{5cm}
 \fi
 
-\setcounter{question}{0}
-\marginnote{Banque PT -- SIA 2009.}
-\marginnote{
-\UPSTIcompetence[2]{B2-16}
-}
+\def\columnseprulecolor{\color{ocre}}
+\setlength{\columnseprule}{0.4pt} 
 
-\begin{marginfigure}
-\includegraphics[width=\linewidth]{fig_00}
-\end{marginfigure}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{exo}{0}
+
+
+
+%\ifprof
+%\else
+\begin{multicols}{2}
+%\fi
+\section*{Mise en situation}
+
+\setcounter{numques}{0}
+
 
 
 
@@ -42,17 +84,16 @@ La base orthonormée directe liée au solide $i$  est notée $\mathcal{B}_i = \l
 
 Le torseur des actions mécaniques exercées par un solide $i$ sur un solide $j$, réduit en $A$ sera noté $\left\{ \torseurstat{F}{i}{j}\right\}$ $=\torseurl{\vectf{i}{j}}{\vectm{A}{i}{j}}{A}$ $=\torseurl{X_{ij}\vect{x}+Y_{ij}\vect{y}+Z_{ij}\vect{z}}{L_{ij} \vect{x}+M_{ij}\vect{y}+N_{ij}\vect{z}}{A}$.% où $\left(\vect{x},\vect{y},\vect{z}\right)$ est une base orthonormée associée à la liaison $L_k$. 
 
-
-\begin{marginfigure}
-\includegraphics[width=\linewidth]{fig_01}
-%\textit{}
-\end{marginfigure}
 \subsection*{Validation de la transmission du mouvement de commande} 
 \subsubsection*{Étude préliminaire d'un modèle simplifié}
 On adopte dans un premier temps, un modèle simplifié, pour une seule griffe, défini par le schéma cinématique
 donné dans la figure suivante.
 
 
+\begin{center}
+\includegraphics[width=\linewidth]{fig_01}
+%\textit{}
+\end{center}
 
 
 \question{En considérant que le modèle est spatial, donner le graphe de structure (graphe des liaisons) associé au schéma cinématique proposé en précisant les éléments géométriques caractéristiques de chaque liaison puis
@@ -84,17 +125,17 @@ Si on fait l'hypothèse que les liaisons sont parfaites, ce modèle est-il hyper
 Afin d'obtenir une commande par obstacle dans les deux sens de commande, le modèle est complété par une
 seconde liaison sphère-plan, telle que le schéma cinématique devienne celui de la figure suivante.
 
-\begin{marginfigure}
-\includegraphics[width=\linewidth]{fig_02}
+\begin{center}
+\includegraphics[width=.8\linewidth]{fig_02}
 %\textit{}
-\end{marginfigure}
+\end{center}
 \begin{obj}
 On cherche ici à montrer qu'il est impossible d'obtenir ce double contact avec la géométrie actuelle.
 \end{obj}
 
 
 
-\question{\label{q4}En vous appuyant sur les résultats précédents et en supposant que les angles $\beta$ et $\beta'$ sont différents de zéro, donner la valeur du degré de mobilité de ce modèle puis son degré d'hyperstatisme. Que concluez-vous de ces résultats ? On notera $\torseurcin{V}{`3}{2}$ le torseur cinématique de la liaison sphère-plan de centre $J$ dont on précisera la normale.}
+\question{En vous appuyant sur les résultats précédents et en supposant que les angles $\beta$ et $\beta'$ sont différents de zéro, donner la valeur du degré de mobilité de ce modèle puis son degré d'hyperstatisme. Que concluez-vous de ces résultats ? On notera $\torseurcin{V}{`3}{2}$ le torseur cinématique de la liaison sphère-plan de centre $J$ dont on précisera la normale.}
 \ifprof
 \begin{corrige}~\\
 \end{corrige}
@@ -114,10 +155,10 @@ On cherche ici à montrer qu'il est impossible d'obtenir ce double contact avec 
 \end{corrige}
 \else
 \fi
-\begin{marginfigure}
+\begin{center}
 \includegraphics[width=\linewidth]{fig_04}
 %\textit{}
-\end{marginfigure}
+\end{center}
 
 \question{Calculer le degré de mobilité du mécanisme ainsi modélisé et comparer cette valeur à celle trouvée à la question \ref{q4}, en supposant les valeurs de $a$ et $b$ quelconques, définies par $\vect{AI}_{32}=a\vect{x_1}+b\vect{y_1}$.}
 \ifprof
@@ -141,10 +182,10 @@ Une simulation informatique du mécanisme montre que si on décide de conserver 
 uniquement au contact en $I$, il est nécessaire d'avoir un profil bombé, donné sur la figure suivante, pour
 le contact en $J$.
 
-\begin{marginfigure}
+\begin{center}
 \includegraphics[width=\linewidth]{fig_05}
 %\textit{}
-\end{marginfigure}
+\end{center}
 
 \question{Expliquer et effectuer, le tracé permettant de trouver exactement la position du
 point de contact $J$, entre la surface sphérique de la tige de commande et le profil bombé de la griffe, obtenu
@@ -182,3 +223,11 @@ de la griffe ? Peut-on valider la solution proposée ?}
 \end{corrige}
 \else
 \fi
+
+
+
+
+
+
+
+\end{multicols}
