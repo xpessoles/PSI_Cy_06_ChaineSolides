@@ -1,35 +1,61 @@
-%\setchapterimage{bandeau}
-\chapter*{TD \arabic{cptTD} :\\ 
-Suspension de l'AddBike -- \ifprof Corrigé \else Sujet \fi}
-\addcontentsline{toc}{section}{TD \arabic{cptTD} : Suspension de l'AddBike -- \ifprof Corrigé \else Sujet \fi}
+%%%% Paramétrage du TD %%%%
+\def\xxactivite{ \ifprof \normalsize{TD 1 -- Corrigé } \else  \ifcolle Colle \else TD 1\fi \fi} % \normalsize \vspace{-.4cm}
+\def\xxauteur{\textsl{Xavier Pessoles}}
 
-\iflivret \stepcounter{cptTD} \else
-\ifprof  \stepcounter{cptTD} \else \fi
-\fi
-
-\setcounter{question}{0}
-\marginnote{Agrégation Sciences Industrielles de l'Ingénieur -- 2018.}
-\marginnote{
-\UPSTIcompetence[2]{B2-16}
-}
-
-\begin{marginfigure}
-\includegraphics[width=\linewidth]{add_03}
-\end{marginfigure}
+\def\xxnumchapitre{Chapitre 2 \vspace{.2cm}}
+\def\xxchapitre{\hspace{.12cm} Hyperstatisme}
 
 
 
+\def\xxcompetences{%
+\vspace{-.5cm}
+\footnotesize{
+\textsl{%
+\textbf{Savoirs et compétences :}\\
+\vspace{-.2cm}
+\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+%\item \textit{Mod2.C34} : chaînes de solides;
+\item \textit{Mod2.C34} : degré de mobilité du modèle;
+\item \textit{Mod2.C34} : degré d’hyperstatisme du modèle;
+\item \textit{Mod2.C34.SF1} : déterminer les conditions géométriques associées à l’hyperstatisme;
+\item \textit{Mod2.C34} : résoudre le système associé à la fermeture cinématique et en déduire le degré de mobilité et d’hyperstatisme.
+\end{itemize}}}}
 
+\def\xxtitreexo{Suspension de l'AddBike}
+\def\xxsourceexo{\hspace{.2cm} \footnotesize{Agrégation Sciences Industrielles de l'Ingénieur -- 2018}}
+
+
+\def\xxfigures{
+\includegraphics[width=.5\linewidth]{add_03}
+}%figues de la page de garde
+
+\input{\repRel/Style/pagegarde_TD}
+\setcounter{numques}{0}
+\setlength{\columnseprule}{.1pt}
+\pagestyle{fancy}
+\thispagestyle{plain}
+\vspace{5.2cm}
+
+\def\columnseprulecolor{\color{ocre}}
+\setlength{\columnseprule}{0.4pt} 
+
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{exo}{0}
+
+
+
+\begin{multicols}{2}
 
 \subsection*{Présentation}
 L'Add-Bike est un système pouvant s’adapter à tous types de vélo et doit permettre de transporter des marchandises (colis ou courses du quotidien) ou des enfants.
-\begin{marginfigure}
-\includegraphics[width=\linewidth]{add_02.png}
-\end{marginfigure}
+\begin{center}
+\includegraphics[width=.4\linewidth]{add_02.png}
+\end{center}
 Il est équipé d'un système de suspension permettant de limiter le mouvement de roulis dans les virages. 
 
 \begin{center}
-\includegraphics[width=.7\linewidth]{add_04.png}
+\includegraphics[width=\linewidth]{add_04.png}
 \end{center}
 
 \subsection*{Exigence 1.2 : Stabilité des occupants et des marchandises}
@@ -46,7 +72,7 @@ Pour pouvoir tourner, le cycliste penche le mât vertical 04 par l’intermédia
 $\vect{x_0}$. Lors de la déformation du parallélogramme, les bielles 01 et 03 ne restent pas parfaitement horizontales ; le passager assis dans le siège lié à la bielle 03, subit donc du roulis, c’est-à-dire un pivotement autour de l’axe horizontal longitudinal $\vect{x_0}$.
 
 \begin{center}
-\includegraphics[width=.7\linewidth]{add_05.png}
+\includegraphics[width=\linewidth]{add_05.png}
 \end{center}
 
 L’angle $\beta$  correspond à l’angle de roulis des bielles 01 et 03.
@@ -77,7 +103,7 @@ Afin de pouvoir vendre son produit à un prix attractif, la start-up doit pouvoi
 \end{corrige}\else\fi
 
 \begin{center}
-\includegraphics[width=.7\linewidth]{add_01.png}
+\includegraphics[width=\linewidth]{add_01.png}
 \end{center}
 
 
@@ -106,4 +132,5 @@ Afin de pouvoir vendre son produit à un prix attractif, la start-up doit pouvoi
 \ifprof
 \begin{corrige}
 \end{corrige}\else\fi
+\end{multicols}
 
