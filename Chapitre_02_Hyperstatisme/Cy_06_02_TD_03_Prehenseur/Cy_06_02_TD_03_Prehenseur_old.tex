@@ -1,30 +1,58 @@
-%\setchapterimage{bandeau}
-\chapter*{TD \arabic{cptTD} :\\ 
-Système de dépose de poudre -- \ifprof Corrigé \else Sujet \fi}
-\addcontentsline{toc}{section}{TD \arabic{cptTD} : Système de dépose de poudre -- \ifprof Corrigé \else Sujet \fi}
+%%%% Paramétrage du TD %%%%
+\def\xxactivite{ \ifprof \normalsize{TD 3 -- Corrigé } \else  \ifcolle Colle \else TD 3\fi \fi} % \normalsize \vspace{-.4cm}
+\def\xxauteur{\textsl{Xavier Pessoles}}
 
-\iflivret \stepcounter{cptTD} \else
-\ifprof  \stepcounter{cptTD} \else \fi
-\fi
-
-\setcounter{question}{0}
-\marginnote{Concours Centrale Supelec -- TSI 2016.}
-\marginnote{
-\UPSTIcompetence[2]{B2-16}
-}
-
-\begin{marginfigure}
-\includegraphics[width=\linewidth]{fig_01}
-\end{marginfigure}
+\def\xxnumchapitre{Chapitre 2 \vspace{.2cm}}
+\def\xxchapitre{\hspace{.12cm} Hyperstatisme}
 
 
+
+\def\xxcompetences{%
+\vspace{-.5cm}
+\footnotesize{
+\textsl{%
+\textbf{Savoirs et compétences :}\\
+\vspace{-.2cm}
+\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+%\item \textit{Mod2.C34} : chaînes de solides;
+\item \textit{Mod2.C34} : degré de mobilité du modèle;
+\item \textit{Mod2.C34} : degré d’hyperstatisme du modèle;
+\item \textit{Mod2.C34.SF1} : déterminer les conditions géométriques associées à l’hyperstatisme;
+\item \textit{Mod2.C34} : résoudre le système associé à la fermeture cinématique et en déduire le degré de mobilité et d’hyperstatisme.
+\end{itemize}}}}
+
+
+\def\xxtitreexo{Système de dépose de poudre}
+\def\xxsourceexo{\hspace{.2cm} \footnotesize{Concours Centrale Supelec -- TSI 2016}}
+
+\def\xxfigures{
+\includegraphics[width=.8\textwidth]{fig_01}
+}%figues de la page de garde
+
+\input{\repRel/Style/pagegarde_TD}
+\setcounter{numques}{0}
+\setlength{\columnseprule}{.1pt}
+\pagestyle{fancy}
+\thispagestyle{plain}
+\vspace{5.2cm}
+
+\def\columnseprulecolor{\color{ocre}}
+\setlength{\columnseprule}{0.4pt} 
+
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{exo}{0}
+%\ifprof
+%\else
+\begin{multicols}{2}
+%\fi
 \section*{Mise en situation}
 \ifprof
 \else
 On s'intéresse à un système permettant de créer des motifs sur de la poudre de maquillage compactée. Le poste de pulvérisation est en partie constitué d'un robot cartésien 3 axes permettant de déplacer des godets de poudre compactée (grâce à un préhenseur) en dessous de la buse de pulvérisation. 
 
 \begin{center}
-\includegraphics[width=.4\linewidth]{fig_02}
+\includegraphics[width=\linewidth]{fig_02}
 \end{center}
 
 \fi
@@ -40,17 +68,17 @@ guidant le préhenseur suivant l’axe $\vect{x}$ supportent les autres rails gu
 
 Le guidage est réalisé par deux axes munis de patins à billes.
 
-\begin{marginfigure}
-\includegraphics[width=\linewidth]{fig_03}
+\begin{center}
+\includegraphics[width=.8\linewidth]{fig_03}
 \includegraphics[width=\linewidth]{fig_04}
-\end{marginfigure}
+\end{center}
 
 Le moteur actionnant l’axe $\vect{x}$ est lié à un réducteur qui entraîne deux ensembles poulies-courroies. Les poulies motrices sont guidées chacune par deux roulements à billes. Les deux poulies motrices sont liées par un arbre de transmission (Arbre 1). La
 figure suivante représente le schéma cinématique de l’ensemble.
 
-\begin{marginfigure}
+\begin{center}
 \includegraphics[width=\linewidth]{fig_05}
-\end{marginfigure}
+\end{center}
 \fi
 
 
@@ -65,9 +93,9 @@ La courroie étant un élément déformable, on n’en tiendra pas compte dans l
 \ifprof
 \begin{corrige} ~\\
 
-\begin{marginfigure}
-\includegraphics[width=\linewidth]{cor_01}
-\end{marginfigure}
+\begin{center}
+\includegraphics[width=.5\linewidth]{cor_01}
+\end{center}
 
 
 \textbf{Méthode cinématique :}
@@ -97,9 +125,9 @@ Au final : $h=m-E_s+I_s=1-6+10=5$.
 \else
 Pour lever l’hyperstatisme de cette liaison, le constructeur a mis en place deux soufflets métalliques en les implantant de part et d’autre de l’arbre de transmission (figure suivante).
 
-\begin{marginfigure}
+\begin{center}
 \includegraphics[width=\linewidth]{fig_06}
-\end{marginfigure}
+\end{center}
 
 Un soufflet métallique est un joint d’accouplement autorisant des défauts d’alignement radiaux, axiaux et angulaires. Ainsi, pour un soufflet liant deux solides $S_1$ et $S_2$ positionné en un point $P$ et dont l’axe du soufflet est $\axe{P}{u}$ :
 \begin{itemize}
@@ -162,21 +190,11 @@ On a $h=m-I_c+E_c = 6-12+6 = 0$.
 \else
 \fi
 
-\ifprof
-\else
-\marginnote{
-\begin{solution}
-\begin{enumerate}
-\item $h=5$.
-\item ...
-\item $m=6$.
-\item $h=0$.
-\item ...
-\end{enumerate} 
-\end{solution}}
-\fi
+
 
 \subsection*{Retour sur le cahier des charges}
+
+
 
 \question{Conclure en justifiant l’utilisation des soufflets.}
 \ifprof
@@ -187,3 +205,25 @@ Le soufflet permet donc de rendre le système isostatique. Il est ainsi possible
 \fi
 
 
+\ifprof
+\else
+\begin{center}
+\begin{tabular}{|p{.95\linewidth}|}
+\hline
+\textbf{Corrigé résumé}
+\begin{enumerate}
+\item $h=5$.
+\item ...
+\item $m=6$.
+\item $h=0$.
+\item ...
+\end{enumerate} \\
+\hline
+\end{tabular}
+\end{center}
+\fi
+
+%\ifprof
+%\else
+\end{multicols}
+%\fi
