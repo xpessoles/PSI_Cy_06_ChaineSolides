@@ -1,25 +1,27 @@
 %\setchapterimage{bandeau}
-\chapter*{TD \arabic{cptTD} \\ 
-Conception de la commande d’un robot chirurgical -- 
+\chapter*{Colle \arabic{cptColle} \\ 
+Conception de la commande d’un robot chirurgica -- 
 \ifprof Corrigé \else Sujet \fi}
-\addcontentsline{toc}{section}{TD \arabic{cptTD} :
-Conception de la commande d’un robot chirurgical -- 
+\addcontentsline{toc}{section}{Colle \arabic{cptColle} :
+Conception de la commande d’un robot chirurgica -- 
 \ifprof Corrigé \else Sujet \fi}
 
-\iflivret \stepcounter{cptTD} \else
-\ifprof  \stepcounter{cptTD} \else \fi
+\iflivret \stepcounter{cptColle} \else
+\ifprof  \stepcounter{cptColle} \else \fi
 \fi
 
 \setcounter{question}{0}
-\marginnote{CCS PSI -- 2015.}
-\marginnote[1cm]{
-\UPSTIcompetence[2]{C1-02}
-\UPSTIcompetence[2]{C2-04}}
+\marginnote{CCS PSI 2015.}
+%\marginnote[1cm]{
+%\UPSTIcompetence[2]{C1-02}
+%\UPSTIcompetence[2]{C2-04}}
 
 \begin{marginfigure}[4cm]
 \centering
-\includegraphics[width=\linewidth]{fig_00}
+\includegraphics[width=4cm]{fig_00}
 \end{marginfigure}
+
+
 
 
 
@@ -44,11 +46,18 @@ On donne le schéma cinématique partiel du bras esclave.
 \includegraphics[width=\linewidth]{fig_03.png}
 \end{center}
 
+
+\begin{center}
+\includegraphics[width=\linewidth]{fig_04.png}
+\end{center}
+
 Le point $T$ est situé à l’intersection des axes $\axe{A'}{{x_0}}$ et  $\axe{P'}{{y_2}'}$. 
 Le vecteur vitesse du point $T$ de 7’ par rapport à 0, noté $\vectv{T}{7'}{0}$, doit être colinéaire à 
 $\vect{y_2}'$.
 
-\question{En s’appuyant sur la figure précédente, calculer $\vectv{P}{7'}{0}$ par dérivation du vecteur position.}
+\question{Tracer le graphe de liaison.}
+
+\question{En s’appuyant sur le schéma cinématique, calculer $\vectv{P}{7'}{0}$ par dérivation du vecteur position.}
 
 \question{Exprimer $\vectv{T}{7'}{0}$ dans la base $\base{x_2'}{y_2'}{z_2'}$ en fonction des données de l’énoncé. Il est conseillé d’utiliser la relation de Varignon en passant par le point $P'$.}
 
@@ -57,4 +66,10 @@ $\vect{y_2}'$.
 
 
 \question{Quelle exigence du cahier des charges (document réponse) justifie cette structure ? Expliquer sans calcul.}
+
+\question{Mettre à jour le graphe de liaisons et donner le degré d'hyperstatisme du modèle. Vous utiliserez la méthode statique et la méthode cinématique.}
+
+\question{Quel peut être l'avantage de disposer d'un système hyperstatique ?}
+
+\question{En conservant l'architecture du mécanisme, proposer des modifications de liaisons permettant de rendre le modèle isostatique.}
 
