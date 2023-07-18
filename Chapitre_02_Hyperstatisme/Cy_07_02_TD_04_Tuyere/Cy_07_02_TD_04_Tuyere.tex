@@ -1,60 +1,29 @@
-%%%% Paramétrage du TD %%%%
-\def\xxactivite{ \ifprof \normalsize{TD 4 -- Corrigé } \else  \ifcolle Colle \else TD 4\fi \fi} % \normalsize \vspace{-.4cm}
-\def\xxauteur{\textsl{Xavier Pessoles}}
+%\setchapterimage{bandeau}
+\chapter*{TD \arabic{cptTD} \\ 
+Tuyère à ouverture variable -- 
+\ifprof Corrigé \else Sujet \fi}
+\addcontentsline{toc}{section}{TD \arabic{cptTD} :
+Tuyère à ouverture variable -- 
+\ifprof Corrigé \else Sujet \fi}
 
-\def\xxnumchapitre{Chapitre 2 \vspace{.2cm}}
-\def\xxchapitre{\hspace{.12cm} Hyperstatisme}
-
-
-
-\def\xxcompetences{%
-\vspace{-.5cm}
-\footnotesize{
-\textsl{%
-\textbf{Savoirs et compétences :}\\
-\vspace{-.2cm}
-\begin{itemize}[label=\ding{112},font=\color{ocre}] 
-%\item \textit{Mod2.C34} : chaînes de solides;
-\item \textit{Mod2.C34} : degré de mobilité du modèle;
-\item \textit{Mod2.C34} : degré d’hyperstatisme du modèle;
-\item \textit{Mod2.C34.SF1} : déterminer les conditions géométriques associées à l’hyperstatisme;
-\item \textit{Mod2.C34} : résoudre le système associé à la fermeture cinématique et en déduire le degré de mobilité et d’hyperstatisme.
-\end{itemize}}}}
-
-\def\xxtitreexo{Tuyère à ouverture variable}
-\def\xxsourceexo{\hspace{.2cm} \footnotesize{Banque PT -- SIA 2011}}
-
-\def\xxfigures{
-\includegraphics[width=.75\textwidth]{fig_00}
-}%figues de la page de garde
-
-
-
-\input{\repRel/Style/pagegarde_TD}
-
-\setlength{\columnseprule}{.1pt}
-
-\pagestyle{fancy}
-\thispagestyle{plain}
-
-\ifprof
-\vspace{5cm}
-\else
-\vspace{5cm}
+\iflivret \stepcounter{cptTD} \else
+\ifprof  \stepcounter{cptTD} \else \fi
 \fi
 
-\def\columnseprulecolor{\color{ocre}}
-\setlength{\columnseprule}{0.4pt} 
+\setcounter{question}{0}
+\marginnote{Banque PT -- SIA 2011.}
+\marginnote[1cm]{
+\UPSTIcompetence[2]{C1-02}
+\UPSTIcompetence[2]{C2-04}}
 
-%%%%%%%%%%%%%%%%%%%%%%%
+\begin{marginfigure}[4cm]
+\centering
+\includegraphics[width=\linewidth]{fig_00}
+\end{marginfigure}
 
-\setcounter{exo}{0}
 
 
-\ifprof
-\else
-\begin{multicols}{2}
-\fi
+
 \section*{Mise en situation}
 Dans le but de calibrer un banc d'essai de turboréacteur, les ingénieurs de la DGA (Direction Générale de l'Armement) a conçu une tuyère à ouverture variable afin de se substituer au turboréacteur. 
 \begin{center}
@@ -250,8 +219,3 @@ raisonnement. Que pensez vous de ce résultat sur la capacité de réalisation d
 \else
 \fi
 
-\ifprof
-\else
-\end{multicols}
-\fi
-%\includepdf[pages=-]{OLD_Corrige.pdf}
