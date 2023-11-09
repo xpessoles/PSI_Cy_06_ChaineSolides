@@ -28,27 +28,28 @@ Nacelle articulée grande portée --
 %PSI XENS 2019
 \ifprof
 \else
+\begin{marginfigure}
+\centering
+\includegraphics[width=\linewidth]{fig_01}
+\caption{Architecture globale de la nacelle \label{fig_01}}
+\end{marginfigure}
+
 La nacelle articulée (Figure \ref{fig_01}) étudiée permet de sécuriser des opérations de travail en hauteur. 
 Cette nacelle s’utilise en extérieur et est adaptée à tous les terrains grâce à ses 4 roues motrices 
 et son essieu oscillant. Elle est principalement utilisée pour : la construction de gros et second 
 œuvre, l’aménagement d’espaces verts, la logistique, la distribution et l’industrie, la maintenance 
 et la restauration. 
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=.5\linewidth]{fig_01}
-\caption{Architecture globale de la nacelle \label{fig_01}}
-\end{figure}
 
 La nacelle est amenée à évoluer dans des terrains parfois accidentés (chantier, terrain en friche…).
 L’objectif est de valider la motricité du châssis par rapport au sol, même sur un terrain accidenté. 
 Le châssis possède un essieu avant monté sur un palonnier pilotable par deux vérins. 
 
-\begin{figure}[H]
+\begin{marginfigure}
 \centering
-\includegraphics[width=.5\linewidth]{fig_02}
+\includegraphics[width=\linewidth]{fig_02}
 \caption{Modèle du châssis \label{fig_02}}
-\end{figure}
+\end{marginfigure}
 
 
 $C_1$, $C_1'$, $C_2$, $C_2'$ sont les centres respectivement des roues avant droite, avant gauche, arrière droite 
@@ -65,6 +66,8 @@ points de contact sont notés respectivement $F_1$, $F_1'$, $F_2$, $F_2'$.
 %\end{center}
 %\end{corrige}
 %\else\fi
+
+\question{Tracer le graphe de structure.}
 
 \question{Déterminer le degré d’hyperstatisme du modèle de la figure \ref{fig_02} sans les vérins et 
 indiquer si ce modèle permet ou non de conserver le contact avec chacune des roues quelle que 
@@ -136,14 +139,14 @@ Le mécanisme est isostatique. Le maintien du contact entre les roues et le sol 
 
 \textbf{Les vérins sont maintenant pris en compte.}
 
-\question{En utilisant le modèle de la figure \ref{fig_02}, proposer une liaison entre le corps du vérin d'une part et le châssis d'autre part. Proposer ensuite une liaison entre la tige du vérin d'une part et l'essieu avant d'autre part.}
+\question{En utilisant le modèle de la figure \ref{fig_02}, proposer une liaison entre le corps du vérin d'une part et le châssis d'autre part. Proposer ensuite une liaison entre la tige du vérin d'une part et l'essieu avant d'autre part. Tracer un schéma cinématique de le solution proposée.}
 \ifprof
 \begin{corrige}
 Le vérin peut être lié de part et d'autre par une liaison rotule de part et d'autre. 
 \end{corrige}
 \else\fi
 
-\question{Déterminer alors le degré d'hypestatisme du mécanisme.}
+\question{Tracer le nouveau graphe de structure puis déterminer le degré d'hypestatisme du mécanisme.}
 \ifprof
 \begin{corrige}
 On ajoute 2 liaisons rotules par vérin et une liaison pivot glissant par vérin.
